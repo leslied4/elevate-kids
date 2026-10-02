@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Stewards — Chapter 3: Greater Things</title>
+<style>
+:root{
+  --ink:#1e2430; --cream:#fffaf0; --gold:#f7c948; --sky:#bfe8ff; --green:#bfe3a5;
+  --blue:#3066be; --red:#e45757; --purple:#7652a6; --tan:#f3dfbb; --soft:#f6f1e8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#d9dde4;color:var(--ink);font-family:"Trebuchet MS","Arial Rounded MT Bold",Arial,sans-serif}
+.book{max-width:980px;margin:0 auto;padding:24px}
+.page{
+  width:100%;min-height:1280px;background:var(--cream);margin:0 auto 28px;padding:34px;position:relative;
+  box-shadow:0 8px 30px rgba(0,0,0,.18);overflow:hidden;page-break-after:always
+}
+.cover{background:linear-gradient(#8fc8ff 0 47%,#8fd28a 47% 100%);display:flex;flex-direction:column;justify-content:space-between}
+.title{font-size:74px;line-height:.9;font-weight:1000;letter-spacing:-3px;text-transform:uppercase;color:#fff;text-shadow:5px 5px 0 var(--ink);margin:10px 0}
+.subtitle{display:inline-block;background:var(--gold);border:5px solid var(--ink);padding:12px 20px;font-size:30px;font-weight:900;transform:rotate(-2deg)}
+.chapter-label{display:inline-block;background:var(--purple);color:#fff;border:4px solid var(--ink);padding:8px 14px;font-weight:900;margin-bottom:8px}
+.panel-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.panel{background:#fff;border:5px solid var(--ink);position:relative;overflow:hidden;min-height:260px;box-shadow:5px 5px 0 rgba(30,36,48,.12)}
+.p12{grid-column:span 12}.p8{grid-column:span 8}.p7{grid-column:span 7}.p6{grid-column:span 6}.p5{grid-column:span 5}.p4{grid-column:span 4}
+.art{height:230px;width:100%;display:block;background:#eef7ff}.tall .art{height:360px}
+.caption{position:absolute;top:10px;left:10px;background:var(--gold);border:3px solid var(--ink);padding:7px 10px;font-weight:900;max-width:76%;z-index:4}
+.narration{padding:12px 14px;font-size:18px;line-height:1.35;font-weight:700;background:#fff}
+.bubble{position:absolute;background:#fff;border:4px solid var(--ink);border-radius:50%;padding:14px 18px;font-weight:900;font-size:18px;line-height:1.18;z-index:5;text-align:center}
+.bubble:after{content:"";position:absolute;width:22px;height:22px;background:#fff;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(45deg);bottom:-12px;left:36%}
+.bubble.right:after{left:auto;right:28%}
+.verse{background:#fff6c6;border:5px solid var(--ink);padding:18px 20px;font-family:Georgia,serif;font-size:21px;line-height:1.4;font-weight:700;margin:18px 0}
+.verse strong{display:block;font-family:"Trebuchet MS",Arial,sans-serif;font-size:19px;margin-top:8px}
+.lesson{background:#eaf7df;border:5px solid var(--ink);padding:18px;margin:18px 0;font-size:20px;line-height:1.4}
+.lesson b{font-size:24px}
+.page-title{font-size:42px;font-weight:1000;text-transform:uppercase;margin:0 0 18px;border-bottom:7px solid var(--gold);padding-bottom:8px}
+.badge{display:inline-block;background:var(--blue);color:white;border:3px solid var(--ink);padding:5px 10px;font-size:15px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.challenge{background:#efe6ff;border:5px solid var(--ink);padding:22px;margin-top:18px}
+.challenge h2{margin:0 0 10px;font-size:30px}
+.q{background:#fff;border:3px dashed var(--ink);padding:12px;margin:10px 0;font-size:18px;font-weight:700}
+.footer{position:absolute;bottom:12px;right:24px;font-weight:900;font-size:14px}
+.center{text-align:center}.keyline{font-size:30px;font-weight:1000;text-align:center;margin:16px 0}
+.sticker{background:var(--red);color:#fff;border:5px solid var(--ink);border-radius:50%;width:170px;height:170px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:1000;font-size:23px;transform:rotate(7deg);box-shadow:5px 5px 0 rgba(0,0,0,.18)}
+.compare{display:flex;gap:18px;margin:18px 0}.compare>div{flex:1;border:5px solid var(--ink);padding:18px;font-size:19px;font-weight:800;line-height:1.4}
+.warn{background:#ffe3dc}.good{background:#e1f5d5}
+@media print{body{background:#fff}.book{padding:0}.page{box-shadow:none;margin:0;width:100%;min-height:100vh}}
+</style>
+</head>
+<body>
+<div class="book">
+
+<section class="page cover">
+  <div>
+    <div class="chapter-label">CHAPTER 3</div>
+    <div class="title">Financial<br>Stewards</div>
+    <div class="subtitle">Greater Things</div>
+  </div>
+  <svg viewBox="0 0 900 540" width="100%">
+    <rect y="355" width="900" height="185" fill="#77b96f"/>
+    <circle cx="120" cy="82" r="55" fill="#fff3a0"/>
+    <g stroke="#1e2430" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="350" y="305" width="200" height="120" rx="14" fill="#f7c948"/>
+      <text x="450" y="375" text-anchor="middle" font-size="34" font-weight="900">FAITHFUL</text>
+      <path d="M450 305V220"/>
+      <circle cx="450" cy="195" r="28" fill="#fff"/>
+      <path d="M450 167v-40M430 132h40"/>
+      <circle cx="220" cy="290" r="48" fill="#7b4f2f"/><rect x="173" y="338" width="94" height="110" rx="28" fill="#f7c948"/>
+      <circle cx="680" cy="290" r="48" fill="#8c5b39"/><rect x="633" y="338" width="94" height="110" rx="28" fill="#e45757"/>
+      <path d="M265 350l85 10M635 350l-85 10"/>
+    </g>
+    <text x="450" y="500" text-anchor="middle" font-size="28" font-weight="900" fill="#1e2430">“Faithful in little. Ready to trust God for greater things.”</text>
+  </svg>
+  <div class="footer">FINANCIAL STEWARDS • CHAPTER 3</div>
+</section>
+
+<section class="page">
+  <div class="badge">Scene 1</div>
+  <h1 class="page-title">What Is “Least”?</h1>
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#eef7ff"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="150" cy="170" r="42" fill="#7b4f2f"/><rect x="110" y="212" width="82" height="105" rx="22" fill="#f7c948"/>
+          <circle cx="390" cy="170" r="42" fill="#8c5b39"/><rect x="350" y="212" width="82" height="105" rx="22" fill="#e45757"/>
+        </g>
+        <text x="270" y="90" text-anchor="middle" font-size="30" font-weight="900">WHAT COUNTS AS “LITTLE”?</text>
+      </svg>
+      <div class="bubble" style="top:145px;left:20px;width:210px;">I thought money was a HUGE deal!</div>
+      <div class="bubble right" style="top:145px;right:16px;width:210px;">Jesus called faithfulness with money a “least” thing compared with true riches.</div>
+      <div class="narration">Lesson 3 starts in Luke 16. The point is not that money is unimportant—it is that money is smaller than the deeper things of God.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <rect x="55" y="70" width="270" height="220" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="115" text-anchor="middle" font-size="25" font-weight="900">LESS</text>
+        <text x="190" y="155" text-anchor="middle" font-size="22">money</text>
+        <path d="M90 180h200" stroke="#1e2430" stroke-width="6"/>
+        <text x="190" y="225" text-anchor="middle" font-size="25" font-weight="900">GREATER</text>
+        <text x="190" y="260" text-anchor="middle" font-size="19">faith • character • healing • relationships • spiritual life</text>
+      </svg>
+      <div class="narration">The lesson calls money “that which is least” and contrasts it with “true riches.”</div>
+    </div>
+  </div>
+  <div class="verse">“He that is faithful in that which is least is faithful also in much...” <strong>Luke 16:10</strong></div>
+  <div class="footer">2</div>
+</section>
+
+<section class="page">
+  <div class="badge">Jesus’ Teaching</div>
+  <h1 class="page-title">Money Is a Servant, Not a Master</h1>
+  <div class="panel-grid">
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#ffe3dc"/>
+        <circle cx="215" cy="120" r="62" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="112" text-anchor="middle" font-size="26" font-weight="900">MONEY</text>
+        <text x="215" y="147" text-anchor="middle" font-size="19">“Serve me!”</text>
+        <path d="M110 245h210" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="292" text-anchor="middle" font-size="21" font-weight="900">WHEN MONEY RULES THE HEART</text>
+      </svg>
+      <div class="narration">Jesus warned that no servant can serve two masters. The lesson identifies mammon with money and asks who really has our trust.</div>
+    </div>
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#e1f5d5"/>
+        <circle cx="215" cy="120" r="62" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="112" text-anchor="middle" font-size="26" font-weight="900">GOD</text>
+        <text x="215" y="147" text-anchor="middle" font-size="19">“Trust Me.”</text>
+        <path d="M110 245h210" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="292" text-anchor="middle" font-size="21" font-weight="900">MONEY BECOMES A TOOL</text>
+      </svg>
+      <div class="narration">Financial stewardship is a way of practicing trust: money is managed, but God is trusted.</div>
+    </div>
+  </div>
+
+  <div class="verse">“Ye cannot serve God and mammon.” <strong>Luke 16:13</strong></div>
+  <div class="lesson"><b>Chapter question:</b> Am I using money—or is money using me?</div>
+  <div class="footer">3</div>
+</section>
+
+<section class="page">
+  <div class="badge">Important Truth</div>
+  <h1 class="page-title">You Cannot Buy a Miracle</h1>
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#ffe3dc"/>
+        <rect x="130" y="95" width="300" height="180" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="280" y="140" text-anchor="middle" font-size="26" font-weight="900">WRONG IDEA</text>
+        <text x="280" y="188" text-anchor="middle" font-size="21">“If I give money,</text>
+        <text x="280" y="220" text-anchor="middle" font-size="21">God owes me a miracle.”</text>
+        <text x="280" y="255" text-anchor="middle" font-size="28" font-weight="900">✗ NO</text>
+      </svg>
+      <div class="narration">The source lesson explicitly rejects this idea. Giving is not a purchase price for healing, salvation, or any blessing.</div>
+    </div>
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#e1f5d5"/>
+        <rect x="45" y="95" width="290" height="180" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="140" text-anchor="middle" font-size="26" font-weight="900">BETTER IDEA</text>
+        <text x="190" y="185" text-anchor="middle" font-size="20">Giving can reveal</text>
+        <text x="190" y="218" text-anchor="middle" font-size="20">whether I trust God.</text>
+        <text x="190" y="255" text-anchor="middle" font-size="28" font-weight="900">✓ TRUST</text>
+      </svg>
+      <div class="narration">The lesson’s connection is about trust: practicing trust in smaller areas builds a pattern of trusting God more deeply.</div>
+    </div>
+  </div>
+  <div class="lesson"><b>Very important:</b> God’s love is not for sale. Healing is not for sale. Salvation is not for sale. Giving is about trust, not payment.</div>
+  <div class="footer">4</div>
+</section>
+
+<section class="page">
+  <div class="badge">Faith Practice</div>
+  <h1 class="page-title">Don’t Divide Your Trust Into Boxes</h1>
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#eef7ff"/>
+        <rect x="80" y="80" width="160" height="140" rx="14" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <rect x="270" y="80" width="160" height="140" rx="14" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <rect x="460" y="80" width="160" height="140" rx="14" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <rect x="650" y="80" width="160" height="140" rx="14" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="160" y="145" text-anchor="middle" font-size="23" font-weight="900">MONEY</text>
+        <text x="350" y="145" text-anchor="middle" font-size="23" font-weight="900">FAMILY</text>
+        <text x="540" y="145" text-anchor="middle" font-size="23" font-weight="900">HEALTH</text>
+        <text x="730" y="145" text-anchor="middle" font-size="23" font-weight="900">FUTURE</text>
+        <text x="450" y="285" text-anchor="middle" font-size="30" font-weight="900">ONE GOD. ONE LIFE. ONE TRUST.</text>
+      </svg>
+      <div class="bubble" style="top:210px;left:55px;width:240px;">Can I trust God in one part of life but refuse to trust Him in another?</div>
+      <div class="bubble right" style="top:210px;right:52px;width:260px;">The lesson says faith should not be compartmentalized. Trust grows when it is practiced consistently.</div>
+      <div class="narration">The central idea is consistency. If fear controls our financial decisions, that same fear can weaken confidence elsewhere.</div>
+    </div>
+  </div>
+  <div class="footer">5</div>
+</section>
+
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">The Rich Young Ruler</h1>
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <div class="caption">Mark 10:17–22</div>
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#bfe8ff"/>
+        <rect y="260" width="560" height="100" fill="#c9b07c"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="190" cy="170" r="43" fill="#8f603f"/><rect x="150" y="213" width="84" height="105" rx="22" fill="#7652a6"/>
+          <circle cx="380" cy="170" r="43" fill="#a16e48"/><rect x="340" y="213" width="84" height="105" rx="22" fill="#f7c948"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:52px;left:20px;width:230px;">Good Master, what shall I do that I may inherit eternal life?</div>
+      <div class="bubble right" style="top:55px;right:16px;width:220px;">Why callest thou me good? There is none good but one, that is, God.</div>
+      <div class="narration">The young ruler appeared sincere. But Jesus looked beyond appearances to the heart.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <circle cx="190" cy="135" r="85" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="115" text-anchor="middle" font-size="22" font-weight="900">WHAT DO I</text>
+        <text x="190" y="145" text-anchor="middle" font-size="22" font-weight="900">LOVE MOST?</text>
+        <text x="190" y="190" text-anchor="middle" font-size="18">God?</text>
+        <text x="190" y="222" text-anchor="middle" font-size="18">or my possessions?</text>
+      </svg>
+      <div class="narration">The lesson interprets Jesus’ command as exposing where the man’s trust really was.</div>
+    </div>
+  </div>
+
+  <div class="verse">“Then Jesus beholding him loved him...” <strong>Mark 10:21</strong></div>
+  <div class="lesson"><b>Notice the motive:</b> Jesus loved the man. The confrontation was not cruelty; it was an invitation to move his trust from possessions to God.</div>
+  <div class="footer">6</div>
+</section>
+
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">The Hard Choice</h1>
+  <div class="panel-grid">
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#ffe3dc"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="215" cy="155" r="47" fill="#a16e48"/>
+          <rect x="170" y="202" width="90" height="112" rx="24" fill="#f7c948"/>
+          <path d="M175 225l-65 40M255 225l65 40"/>
+        </g>
+        <text x="215" y="95" text-anchor="middle" font-size="25" font-weight="900">“SELL... GIVE... FOLLOW ME.”</text>
+      </svg>
+      <div class="narration">Jesus told him to sell what he had, give to the poor, and follow Him.</div>
+    </div>
+
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#d9dce6"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="215" cy="150" r="47" fill="#a16e48"/>
+          <path d="M190 153q25-15 50 0" fill="none"/>
+          <rect x="170" y="198" width="90" height="112" rx="24" fill="#f7c948"/>
+          <path d="M175 225l-55 40M255 225l55 40"/>
+        </g>
+        <text x="215" y="335" text-anchor="middle" font-size="22" font-weight="900">HE WALKED AWAY SAD.</text>
+      </svg>
+      <div class="narration">His response revealed how strongly his heart was attached to his possessions.</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="warn"><b>The issue was not:</b><br>“Having possessions is automatically wrong.”</div>
+    <div class="good"><b>The issue was:</b><br>“Do possessions have your heart?”</div>
+  </div>
+
+  <div class="verse">“...go thy way, sell whatsoever thou hast, and give to the poor... and come... follow me.” <strong>Mark 10:21</strong></div>
+  <div class="footer">7</div>
+</section>
+
+<section class="page">
+  <div class="badge">A Helpful Contrast</div>
+  <h1 class="page-title">Why Didn’t Jesus Tell Everyone the Same Thing?</h1>
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#e1f5d5"/>
+        <rect x="75" y="65" width="300" height="220" rx="18" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <rect x="525" y="65" width="300" height="220" rx="18" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="225" y="110" text-anchor="middle" font-size="25" font-weight="900">RICH YOUNG RULER</text>
+        <text x="225" y="155" text-anchor="middle" font-size="20">Clung to possessions</text>
+        <text x="225" y="192" text-anchor="middle" font-size="20">Walked away sad</text>
+        <text x="675" y="110" text-anchor="middle" font-size="25" font-weight="900">ZACCHAEUS</text>
+        <text x="675" y="155" text-anchor="middle" font-size="20">Chose generosity</text>
+        <text x="675" y="192" text-anchor="middle" font-size="20">Offered restitution freely</text>
+        <text x="450" y="325" text-anchor="middle" font-size="28" font-weight="900">THE HEART WAS THE ISSUE.</text>
+      </svg>
+      <div class="narration">Lesson 3 points out that Jesus did not tell every wealthy person to sell everything. Zacchaeus voluntarily chose generosity. The lesson uses this contrast to emphasize trust rather than a universal rule about owning things.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Ask yourself:</b> If God asked me to release something I value, would fear control me—or could I trust Him?</div>
+  <div class="footer">8</div>
+</section>
+
+<section class="page">
+  <div class="badge">Faith in Practice</div>
+  <h1 class="page-title">Giving Shows What We Rely On</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#fff0cc"/>
+        <circle cx="280" cy="150" r="95" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="280" y="126" text-anchor="middle" font-size="24" font-weight="900">RELIANCE</text>
+        <text x="280" y="165" text-anchor="middle" font-size="19">What do I lean on</text>
+        <text x="280" y="195" text-anchor="middle" font-size="19">for security?</text>
+        <path d="M180 275h200" stroke="#1e2430" stroke-width="7"/>
+        <text x="280" y="320" text-anchor="middle" font-size="22" font-weight="900">MONEY — OR GOD?</text>
+      </svg>
+      <div class="narration">The lesson describes trust as reliance—where your confidence rests for support.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#bfe8ff"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="190" cy="140" r="44" fill="#7b4f2f"/><rect x="148" y="185" width="86" height="108" rx="24" fill="#f7c948"/>
+          <path d="M150 210l-70 35M232 210l65 35"/>
+        </g>
+      </svg>
+      <div class="bubble right" style="top:55px;right:12px;width:230px;">Giving doesn’t create God’s love. But it can reveal whether I believe He is my source.</div>
+      <div class="narration">That distinction is central to keeping this lesson healthy and clear for children.</div>
+    </div>
+  </div>
+
+  <div class="verse">“Give, and it shall be given unto you...” <strong>Luke 6:38</strong></div>
+  <div class="footer">9</div>
+</section>
+
+<section class="page">
+  <div class="badge">Growing Faith</div>
+  <h1 class="page-title">Small Trust Can Train Us for Greater Trust</h1>
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#eef7ff"/>
+        <g stroke="#1e2430" stroke-width="7" fill="none">
+          <path d="M80 285h130v-55h130v-55h130v-55h130v-55h130"/>
+        </g>
+        <text x="145" y="320" text-anchor="middle" font-size="20" font-weight="900">MONEY</text>
+        <text x="275" y="265" text-anchor="middle" font-size="20" font-weight="900">TIME</text>
+        <text x="405" y="210" text-anchor="middle" font-size="20" font-weight="900">FAMILY</text>
+        <text x="535" y="155" text-anchor="middle" font-size="20" font-weight="900">HEALTH</text>
+        <text x="665" y="100" text-anchor="middle" font-size="20" font-weight="900">CALLING</text>
+      </svg>
+      <div class="bubble" style="top:55px;left:45px;width:260px;">Faith isn’t a magic ladder where I earn bigger blessings...</div>
+      <div class="bubble right" style="top:55px;right:45px;width:285px;">...but practicing trust in everyday choices can help me become steadier when harder things come.</div>
+      <div class="narration">That captures the chapter’s child-friendly takeaway without turning faith into a transaction.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Growth takes practice.</b> A child who learns to trust God with allowance, possessions, time, and generosity is learning a pattern of dependence that can carry into bigger decisions later.</div>
+  <div class="footer">10</div>
+</section>
+
+<section class="page">
+  <div class="badge">The Whole Life</div>
+  <h1 class="page-title">God Wants More Than One Hour on Sunday</h1>
+
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#e1f5d5"/>
+        <circle cx="450" cy="180" r="105" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="450" y="135" text-anchor="middle" font-size="26" font-weight="900">MY WHOLE LIFE</text>
+        <text x="450" y="177" text-anchor="middle" font-size="20">church • school • money</text>
+        <text x="450" y="210" text-anchor="middle" font-size="20">family • health • future</text>
+        <text x="450" y="250" text-anchor="middle" font-size="24" font-weight="900">GOD IS PART OF ALL OF IT.</text>
+      </svg>
+      <div class="narration">Lesson 3 says God does not want to be limited to “church time.” Financial choices are part of discipleship because they are part of real life.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Chapter 3 in one sentence:</b><br>
+  Faithfulness with money is not a way to purchase God’s blessings; it is one practical way to learn consistent trust in God so that our whole lives—not just one part—rest on Him.</div>
+  <div class="footer">11</div>
+</section>
+
+<section class="page">
+  <div class="badge">Steward Challenge</div>
+  <h1 class="page-title">Talk, Think & Do</h1>
+
+  <div class="challenge">
+    <h2>🧠 Think About It</h2>
+    <div class="q">1. According to Luke 16, what does the lesson call “that which is least”?</div>
+    <div class="q">2. What are “true riches” compared with money?</div>
+    <div class="q">3. Can giving money buy a miracle? Why not?</div>
+    <div class="q">4. What did the rich young ruler’s response reveal about his heart?</div>
+    <div class="q">5. Why is Zacchaeus an important contrast?</div>
+    <div class="q">6. What does it mean to rely on God instead of relying on money?</div>
+  </div>
+
+  <div class="challenge" style="background:#fff0cc">
+    <h2>✋ Faithfulness Challenge</h2>
+    <p style="font-size:20px;line-height:1.45;font-weight:700">
+      Choose one “small” area this week where you can practice trust and faithfulness—your allowance, your time, your belongings, or something you promised to do.
+      Be faithful there.
+    </p>
+    <p class="keyline">“God, help me trust You in the small things and the greater things.”</p>
+  </div>
+
+  <div class="challenge" style="background:#e1f5d5">
+    <h2>📖 Scripture Trail</h2>
+    <p style="font-size:18px;line-height:1.55;font-weight:700">
+      <b>Luke 16:10–13 • Romans 10:9 • Luke 6:38 • Mark 10:17–22 • Mark 10:29–30 • 1 Samuel 16:7 • 2 Corinthians 8:9 • Exodus 20:3 • Exodus 20:17</b>
+    </p>
+  </div>
+
+  <div class="verse center">
+    MEMORY VERSE<br><br>
+    “He that is faithful in that which is least is faithful also in much...”<br>
+    <strong>Luke 16:10</strong>
+  </div>
+
+  <div class="center" style="margin-top:20px">
+    <div class="sticker" style="margin:auto">FAITHFUL<br>IN LITTLE.<br>TRUSTING<br>FOR MORE.</div>
+  </div>
+
+  <div class="footer">12 • END OF CHAPTER 3</div>
+</section>
+
+</div>
+</body>
+</html>

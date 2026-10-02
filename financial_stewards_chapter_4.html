@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Stewards — Chapter 4: Hidden Treasure</title>
+<style>
+:root{
+  --ink:#1e2430; --cream:#fffaf0; --gold:#f7c948; --sky:#bfe8ff; --green:#bfe3a5;
+  --blue:#3066be; --red:#e45757; --purple:#7652a6; --tan:#f3dfbb; --soft:#f6f1e8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#d9dde4;color:var(--ink);font-family:"Trebuchet MS","Arial Rounded MT Bold",Arial,sans-serif}
+.book{max-width:980px;margin:0 auto;padding:24px}
+.page{width:100%;min-height:1280px;background:var(--cream);margin:0 auto 28px;padding:34px;position:relative;box-shadow:0 8px 30px rgba(0,0,0,.18);overflow:hidden;page-break-after:always}
+.cover{background:linear-gradient(#704b9e 0 45%,#d8b566 45% 100%);display:flex;flex-direction:column;justify-content:space-between}
+.title{font-size:74px;line-height:.9;font-weight:1000;letter-spacing:-3px;text-transform:uppercase;color:#fff;text-shadow:5px 5px 0 var(--ink);margin:10px 0}
+.subtitle{display:inline-block;background:var(--gold);border:5px solid var(--ink);padding:12px 20px;font-size:30px;font-weight:900;transform:rotate(-2deg)}
+.chapter-label{display:inline-block;background:var(--blue);color:#fff;border:4px solid var(--ink);padding:8px 14px;font-weight:900;margin-bottom:8px}
+.panel-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.panel{background:#fff;border:5px solid var(--ink);position:relative;overflow:hidden;min-height:260px;box-shadow:5px 5px 0 rgba(30,36,48,.12)}
+.p12{grid-column:span 12}.p8{grid-column:span 8}.p7{grid-column:span 7}.p6{grid-column:span 6}.p5{grid-column:span 5}.p4{grid-column:span 4}
+.art{height:230px;width:100%;display:block;background:#eef7ff}.tall .art{height:360px}
+.caption{position:absolute;top:10px;left:10px;background:var(--gold);border:3px solid var(--ink);padding:7px 10px;font-weight:900;max-width:76%;z-index:4}
+.narration{padding:12px 14px;font-size:18px;line-height:1.35;font-weight:700;background:#fff}
+.bubble{position:absolute;background:#fff;border:4px solid var(--ink);border-radius:50%;padding:14px 18px;font-weight:900;font-size:18px;line-height:1.18;z-index:5;text-align:center}
+.bubble:after{content:"";position:absolute;width:22px;height:22px;background:#fff;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(45deg);bottom:-12px;left:36%}
+.bubble.right:after{left:auto;right:28%}
+.verse{background:#fff6c6;border:5px solid var(--ink);padding:18px 20px;font-family:Georgia,serif;font-size:21px;line-height:1.4;font-weight:700;margin:18px 0}
+.verse strong{display:block;font-family:"Trebuchet MS",Arial,sans-serif;font-size:19px;margin-top:8px}
+.lesson{background:#eaf7df;border:5px solid var(--ink);padding:18px;margin:18px 0;font-size:20px;line-height:1.4}
+.lesson b{font-size:24px}
+.page-title{font-size:42px;font-weight:1000;text-transform:uppercase;margin:0 0 18px;border-bottom:7px solid var(--gold);padding-bottom:8px}
+.badge{display:inline-block;background:var(--purple);color:white;border:3px solid var(--ink);padding:5px 10px;font-size:15px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.challenge{background:#efe6ff;border:5px solid var(--ink);padding:22px;margin-top:18px}
+.challenge h2{margin:0 0 10px;font-size:30px}
+.q{background:#fff;border:3px dashed var(--ink);padding:12px;margin:10px 0;font-size:18px;font-weight:700}
+.footer{position:absolute;bottom:12px;right:24px;font-weight:900;font-size:14px}
+.center{text-align:center}.keyline{font-size:30px;font-weight:1000;text-align:center;margin:16px 0}
+.sticker{background:var(--red);color:#fff;border:5px solid var(--ink);border-radius:50%;width:175px;height:175px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:1000;font-size:22px;transform:rotate(7deg);box-shadow:5px 5px 0 rgba(0,0,0,.18)}
+.compare{display:flex;gap:18px;margin:18px 0}.compare>div{flex:1;border:5px solid var(--ink);padding:18px;font-size:19px;font-weight:800;line-height:1.4}.warn{background:#ffe3dc}.good{background:#e1f5d5}
+@media print{body{background:#fff}.book{padding:0}.page{box-shadow:none;margin:0;width:100%;min-height:100vh}}
+</style>
+</head>
+<body>
+<div class="book">
+
+<!-- COVER -->
+<section class="page cover">
+  <div>
+    <div class="chapter-label">CHAPTER 4</div>
+    <div class="title">Financial<br>Stewards</div>
+    <div class="subtitle">Hidden Treasure</div>
+  </div>
+  <svg viewBox="0 0 900 540" width="100%">
+    <rect y="350" width="900" height="190" fill="#b58b45"/>
+    <circle cx="120" cy="80" r="55" fill="#fff3a0"/>
+    <g stroke="#1e2430" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="335" y="300" width="230" height="145" rx="12" fill="#c7833f"/>
+      <path d="M350 300 Q450 205 550 300Z" fill="#e2a45f"/>
+      <rect x="425" y="328" width="50" height="72" fill="#f7c948"/>
+      <circle cx="450" cy="250" r="32" fill="#fff6c6"/>
+      <path d="M450 218v64M418 250h64" stroke="#f7c948"/>
+      <circle cx="205" cy="290" r="48" fill="#7b4f2f"/><rect x="158" y="338" width="94" height="110" rx="28" fill="#f7c948"/>
+      <circle cx="700" cy="290" r="48" fill="#8c5b39"/><rect x="653" y="338" width="94" height="110" rx="28" fill="#e45757"/>
+      <path d="M252 355l80 5M652 355l-87 5"/>
+    </g>
+    <text x="450" y="500" text-anchor="middle" font-size="28" font-weight="900" fill="#1e2430">“Where your treasure is, there will your heart be also.”</text>
+  </svg>
+  <div class="footer">FINANCIAL STEWARDS • CHAPTER 4</div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="badge">Scene 1</div>
+  <h1 class="page-title">Where Is Your Treasure?</h1>
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#eef7ff"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <rect x="90" y="175" width="150" height="95" rx="10" fill="#c7833f"/>
+          <path d="M100 175q65-75 130 0" fill="#e2a45f"/>
+          <circle cx="310" cy="135" r="42" fill="#7b4f2f"/><rect x="270" y="178" width="82" height="105" rx="22" fill="#f7c948"/>
+          <path d="M275 200l-55 38M350 200l55 25"/>
+          <circle cx="440" cy="240" r="35" fill="#f7c948"/>
+          <text x="440" y="251" text-anchor="middle" font-size="34">$</text>
+        </g>
+      </svg>
+      <div class="bubble" style="top:55px;left:18px;width:230px;">Treasure means gold and money, right?</div>
+      <div class="narration">Kofi imagines treasure as coins in a chest. But Jesus’ teaching goes deeper: treasure points to what our hearts value and trust.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <circle cx="190" cy="120" r="78" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="105" text-anchor="middle" font-size="24" font-weight="900">FOLLOW THE</text>
+        <text x="190" y="140" text-anchor="middle" font-size="24" font-weight="900">TREASURE...</text>
+        <text x="190" y="182" text-anchor="middle" font-size="20">and you learn</text>
+        <text x="190" y="215" text-anchor="middle" font-size="22" font-weight="900">ABOUT THE HEART.</text>
+      </svg>
+      <div class="narration">Lesson 4 begins with this principle: where money goes can reveal what matters most to us.</div>
+    </div>
+  </div>
+
+  <div class="verse">“Lay not up for yourselves treasures upon earth... But lay up for yourselves treasures in heaven... For where your treasure is, there will your heart be also.” <strong>Matthew 6:19–21</strong></div>
+  <div class="footer">2</div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="badge">Heart Check</div>
+  <h1 class="page-title">Having Money Is Not the Same as Trusting Money</h1>
+  <div class="panel-grid">
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#e1f5d5"/>
+        <circle cx="215" cy="120" r="60" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="110" text-anchor="middle" font-size="26" font-weight="900">HAVING</text>
+        <text x="215" y="145" text-anchor="middle" font-size="22">resources</text>
+        <path d="M100 240h230" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="290" text-anchor="middle" font-size="21" font-weight="900">CAN BE A BLESSING.</text>
+      </svg>
+      <div class="narration">Lesson 4 does not say money itself is evil. It warns about putting confidence in what money can do.</div>
+    </div>
+
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#ffe3dc"/>
+        <circle cx="215" cy="120" r="60" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="110" text-anchor="middle" font-size="26" font-weight="900">TRUSTING</text>
+        <text x="215" y="145" text-anchor="middle" font-size="22">riches</text>
+        <path d="M100 240h230" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="290" text-anchor="middle" font-size="21" font-weight="900">CAN CAPTURE THE HEART.</text>
+      </svg>
+      <div class="narration">The danger is letting money become the thing that makes us feel safe, powerful, or important.</div>
+    </div>
+  </div>
+
+  <div class="verse">“Children, how hard is it for them that trust in riches to enter into the kingdom of God!” <strong>Mark 10:24</strong></div>
+  <div class="lesson"><b>The key word is trust.</b> The lesson’s warning is not simply “rich people are bad.” It is about where confidence rests.</div>
+  <div class="footer">3</div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">A Camel, a Needle, and an Impossible Picture</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#bfe8ff"/>
+        <rect y="270" width="560" height="90" fill="#d8b77d"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="190" cy="195" rx="85" ry="52" fill="#c79a65"/>
+          <circle cx="265" cy="150" r="27" fill="#c79a65"/>
+          <path d="M248 172l-35 42M122 230l-15 85M165 235l-10 80M220 235l10 80M255 225l24 85"/>
+          <path d="M215 170q25-70 48-20"/>
+          <circle cx="274" cy="145" r="3"/>
+          <line x1="390" y1="120" x2="390" y2="280" stroke="#6f7885" stroke-width="10"/>
+          <ellipse cx="390" cy="118" rx="22" ry="34" fill="none" stroke="#6f7885" stroke-width="8"/>
+        </g>
+        <text x="390" y="320" text-anchor="middle" font-size="20" font-weight="900">A TINY NEEDLE!</text>
+      </svg>
+      <div class="bubble" style="top:40px;left:22px;width:245px;">A camel through THAT?! Impossible!</div>
+      <div class="narration">Jesus used a shocking picture to show how impossible salvation is by human strength or human security.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <circle cx="190" cy="145" r="95" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="125" text-anchor="middle" font-size="25" font-weight="900">WITH PEOPLE:</text>
+        <text x="190" y="165" text-anchor="middle" font-size="22">impossible</text>
+        <text x="190" y="210" text-anchor="middle" font-size="25" font-weight="900">WITH GOD:</text>
+        <text x="190" y="250" text-anchor="middle" font-size="22">possible</text>
+      </svg>
+      <div class="narration">The disciples asked, “Who then can be saved?” Jesus pointed them back to God.</div>
+    </div>
+  </div>
+
+  <div class="verse">“With men it is impossible, but not with God: for with God all things are possible.” <strong>Mark 10:27</strong></div>
+  <div class="footer">4</div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="badge">Reliance</div>
+  <h1 class="page-title">What Are You Leaning On?</h1>
+
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#eef7ff"/>
+        <line x1="450" y1="40" x2="450" y2="320" stroke="#1e2430" stroke-width="7"/>
+        <rect x="80" y="90" width="285" height="180" rx="18" fill="#ffe3dc" stroke="#1e2430" stroke-width="7"/>
+        <rect x="535" y="90" width="285" height="180" rx="18" fill="#e1f5d5" stroke="#1e2430" stroke-width="7"/>
+        <text x="222" y="130" text-anchor="middle" font-size="25" font-weight="900">MONEY AS SUPPORT</text>
+        <text x="222" y="175" text-anchor="middle" font-size="20">“If my money is okay,</text>
+        <text x="222" y="208" text-anchor="middle" font-size="20">then I am okay.”</text>
+        <text x="677" y="130" text-anchor="middle" font-size="25" font-weight="900">GOD AS SUPPORT</text>
+        <text x="677" y="175" text-anchor="middle" font-size="20">“Money can change.</text>
+        <text x="677" y="208" text-anchor="middle" font-size="20">God is still my source.”</text>
+      </svg>
+      <div class="narration">Lesson 4 uses the word <b>reliance</b>: what do we depend on? What gives us “confident rest for support”?</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>The question is not:</b> “Do I have money?”<br><b>The question is:</b> “What do I rely on?”</div>
+  <div class="footer">5</div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <div class="badge">Jesus’ Parable</div>
+  <h1 class="page-title">The Steward Who Wasted His Master’s Money</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <div class="caption">Luke 16:1–3</div>
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#fff0cc"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="160" cy="145" r="42" fill="#a16e48"/><rect x="120" y="188" width="82" height="105" rx="22" fill="#7652a6"/>
+          <circle cx="390" cy="145" r="42" fill="#8c5b39"/><rect x="350" y="188" width="82" height="105" rx="22" fill="#e45757"/>
+          <rect x="240" y="210" width="80" height="55" fill="#fff" stroke="#1e2430" stroke-width="5"/>
+          <path d="M250 225h60M250 243h60"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:55px;left:20px;width:235px;">Give an account of your stewardship!</div>
+      <div class="bubble right" style="top:60px;right:16px;width:225px;">Uh-oh. He’s going to check the books!</div>
+      <div class="narration">A wealthy man discovered that his steward had been wasting or mismanaging his resources and demanded an account.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#ffe3dc"/>
+        <circle cx="190" cy="140" r="48" fill="#8c5b39" stroke="#1e2430" stroke-width="7"/>
+        <rect x="145" y="190" width="90" height="110" rx="24" fill="#e45757" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="335" text-anchor="middle" font-size="20" font-weight="900">HE NEEDED A PLAN.</text>
+      </svg>
+      <div class="bubble right" style="top:45px;right:14px;width:240px;">What shall I do? I’m losing my stewardship!</div>
+      <div class="narration">Instead of becoming responsible, the dishonest steward began scheming.</div>
+    </div>
+  </div>
+
+  <div class="footer">6</div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="badge">The Scheme</div>
+  <h1 class="page-title">He Changed the Bills!</h1>
+
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#eef7ff"/>
+        <rect x="80" y="70" width="300" height="210" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <rect x="520" y="70" width="300" height="210" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="230" y="115" text-anchor="middle" font-size="25" font-weight="900">100 MEASURES OF OIL</text>
+        <text x="230" y="175" text-anchor="middle" font-size="42" font-weight="900">100 → 50</text>
+        <text x="670" y="115" text-anchor="middle" font-size="25" font-weight="900">100 MEASURES OF WHEAT</text>
+        <text x="670" y="175" text-anchor="middle" font-size="42" font-weight="900">100 → 80</text>
+        <text x="450" y="325" text-anchor="middle" font-size="24" font-weight="900">HE WAS TRYING TO MAKE PEOPLE OWE HIM A FAVOR.</text>
+      </svg>
+      <div class="bubble" style="top:200px;left:90px;width:235px;">Write fifty!</div>
+      <div class="bubble right" style="top:200px;right:90px;width:235px;">Write eighty!</div>
+      <div class="narration">He cut the debts so that, after losing his job, the debtors might help him later.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Important:</b> The dishonesty is still wrong. The lesson does not present stealing as good. The surprising point comes next: the master noticed that the steward had finally started thinking about the <i>future</i>.</div>
+  <div class="footer">7</div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="page">
+  <div class="badge">The Surprise</div>
+  <h1 class="page-title">Why Was the Dishonest Steward Commended?</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#fff0cc"/>
+        <circle cx="280" cy="145" r="62" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="280" y="130" text-anchor="middle" font-size="26" font-weight="900">NOT FOR</text>
+        <text x="280" y="168" text-anchor="middle" font-size="26" font-weight="900">DISHONESTY</text>
+        <path d="M125 250h310" stroke="#1e2430" stroke-width="7"/>
+        <text x="280" y="305" text-anchor="middle" font-size="23" font-weight="900">FOR THINKING AHEAD.</text>
+      </svg>
+      <div class="narration">Luke says the master commended the unjust steward “because he had done wisely.” Lesson 4 interprets the wisdom as recognizing money’s ability to affect the future.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#e1f5d5"/>
+        <text x="190" y="90" text-anchor="middle" font-size="28" font-weight="900">MONEY IS A TOOL.</text>
+        <text x="190" y="145" text-anchor="middle" font-size="20">It can be wasted</text>
+        <text x="190" y="180" text-anchor="middle" font-size="20">on the moment...</text>
+        <text x="190" y="230" text-anchor="middle" font-size="20">or used wisely</text>
+        <text x="190" y="265" text-anchor="middle" font-size="20">with the future in mind.</text>
+      </svg>
+      <div class="narration">This becomes one of the chapter’s two main conclusions.</div>
+    </div>
+  </div>
+
+  <div class="verse">“And the lord commended the unjust steward, because he had done wisely...” <strong>Luke 16:8</strong></div>
+  <div class="footer">8</div>
+</section>
+
+<!-- PAGE 9 -->
+<section class="page">
+  <div class="badge">Hidden Treasure</div>
+  <h1 class="page-title">The Golden Egg Is Not the Greatest Treasure</h1>
+
+  <div class="panel-grid">
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#fff0cc"/>
+        <ellipse cx="215" cy="180" rx="80" ry="105" fill="#f7c948" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="190" text-anchor="middle" font-size="28" font-weight="900">GOLDEN EGG</text>
+        <text x="215" y="315" text-anchor="middle" font-size="21" font-weight="900">THE RESULT</text>
+      </svg>
+      <div class="narration">The lesson uses the old golden-egg picture: an egg is valuable, but the source producing the eggs is even more valuable.</div>
+    </div>
+
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#e1f5d5"/>
+        <ellipse cx="215" cy="180" rx="100" ry="80" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <circle cx="288" cy="145" r="35" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <polygon points="322,145 365,160 323,176" fill="#f7c948" stroke="#1e2430" stroke-width="6"/>
+        <text x="215" y="315" text-anchor="middle" font-size="21" font-weight="900">THE SOURCE</text>
+      </svg>
+      <div class="narration">Lesson 4 says money is not the true asset; God’s blessing and favor are the deeper treasure.</div>
+    </div>
+  </div>
+
+  <div class="verse">“...it is he that giveth thee power to get wealth...” <strong>Deuteronomy 8:18</strong></div>
+
+  <div class="lesson"><b>Hidden treasure:</b> Don’t become so fascinated with the “golden eggs” that you forget the One you believe is the source of every good thing.</div>
+  <div class="footer">9</div>
+</section>
+
+<!-- PAGE 10 -->
+<section class="page">
+  <div class="badge">Future Thinking</div>
+  <h1 class="page-title">Spend Only for Today—or Invest in Tomorrow?</h1>
+
+  <div class="panel-grid">
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#ffe3dc"/>
+        <text x="215" y="85" text-anchor="middle" font-size="28" font-weight="900">RIGHT NOW!</text>
+        <circle cx="130" cy="180" r="45" fill="#8fc1ee" stroke="#1e2430" stroke-width="7"/>
+        <rect x="230" y="135" width="90" height="90" rx="12" fill="#e45757" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="300" text-anchor="middle" font-size="20" font-weight="900">EVERY DOLLAR DISAPPEARS INTO THE MOMENT.</text>
+      </svg>
+      <div class="narration">Lesson 4 warns against using everything on short-lived pleasures and ignoring the future.</div>
+    </div>
+
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#e1f5d5"/>
+        <text x="215" y="85" text-anchor="middle" font-size="28" font-weight="900">THINK AHEAD!</text>
+        <rect x="80" y="140" width="110" height="80" rx="10" fill="#f7c948" stroke="#1e2430" stroke-width="7"/>
+        <rect x="240" y="140" width="110" height="80" rx="10" fill="#8fc1ee" stroke="#1e2430" stroke-width="7"/>
+        <text x="135" y="187" text-anchor="middle" font-size="20" font-weight="900">SAVE</text>
+        <text x="295" y="187" text-anchor="middle" font-size="20" font-weight="900">GIVE</text>
+        <text x="215" y="300" text-anchor="middle" font-size="20" font-weight="900">USE MONEY TO SHAPE THE FUTURE.</text>
+      </svg>
+      <div class="narration">A steward plans for later years, family needs, and ways to help people—not merely today’s wants.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Future thinking includes both:</b> responsible provision for your household <i>and</i> using resources to touch other people’s lives.</div>
+  <div class="footer">10</div>
+</section>
+
+<!-- PAGE 11 -->
+<section class="page">
+  <div class="badge">Eternal Treasure</div>
+  <h1 class="page-title">Money Will Not Last—People Matter Forever</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#bfe8ff"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="145" cy="165" r="40" fill="#7b4f2f"/><rect x="108" y="205" width="76" height="100" rx="20" fill="#f7c948"/>
+          <circle cx="280" cy="165" r="40" fill="#8c5b39"/><rect x="243" y="205" width="76" height="100" rx="20" fill="#e45757"/>
+          <circle cx="415" cy="165" r="40" fill="#9a6a44"/><rect x="378" y="205" width="76" height="100" rx="20" fill="#5a9ee6"/>
+          <path d="M183 230l58 8M319 230l58 8"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:48px;left:35px;width:230px;">Things wear out. People matter.</div>
+      <div class="bubble right" style="top:50px;right:32px;width:230px;">So money can become “eternal treasure” when it helps people and the Gospel.</div>
+      <div class="narration">Lesson 4 says money itself does not go to heaven, but resources can be used in ways that have lasting effects on people.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <text x="190" y="90" text-anchor="middle" font-size="27" font-weight="900">THE #1 USE?</text>
+        <text x="190" y="145" text-anchor="middle" font-size="22">Touch people’s lives.</text>
+        <path d="M70 185h240" stroke="#1e2430" stroke-width="7"/>
+        <text x="190" y="235" text-anchor="middle" font-size="19">help • give • serve</text>
+        <text x="190" y="270" text-anchor="middle" font-size="19">support the Gospel</text>
+      </svg>
+      <div class="narration">This is the chapter’s strongest practical priority.</div>
+    </div>
+  </div>
+
+  <div class="verse">“...Make to yourselves friends of the mammon of unrighteousness; that, when ye fail, they may receive you into everlasting habitations.” <strong>Luke 16:9</strong></div>
+  <div class="footer">11</div>
+</section>
+
+<!-- PAGE 12 -->
+<section class="page">
+  <div class="badge">Balance</div>
+  <h1 class="page-title">Giving Does Not Mean Neglecting Your Family</h1>
+
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#e1f5d5"/>
+        <rect x="90" y="95" width="300" height="180" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <rect x="510" y="95" width="300" height="180" rx="16" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="240" y="135" text-anchor="middle" font-size="25" font-weight="900">CARE FOR YOUR FAMILY</text>
+        <text x="240" y="185" text-anchor="middle" font-size="20">food • shelter • needs</text>
+        <text x="240" y="225" text-anchor="middle" font-size="20">prepare for the future</text>
+        <text x="660" y="135" text-anchor="middle" font-size="25" font-weight="900">INVEST IN PEOPLE</text>
+        <text x="660" y="185" text-anchor="middle" font-size="20">give • serve • support</text>
+        <text x="660" y="225" text-anchor="middle" font-size="20">make an eternal difference</text>
+      </svg>
+      <div class="narration">The source lesson explicitly says a person is not a good steward if the family is left without basic shelter because everything was given away.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Stewardship needs balance:</b> take care of real needs, plan wisely, and still ask how much of what God gives you can be used to bless others.</div>
+
+  <div class="compare">
+    <div class="warn"><b>Not stewardship:</b><br>“I will ignore my responsibilities so I can say I gave everything.”</div>
+    <div class="good"><b>Stewardship:</b><br>“I will care for my responsibilities and still live with an eternal perspective.”</div>
+  </div>
+  <div class="footer">12</div>
+</section>
+
+<!-- PAGE 13 -->
+<section class="page">
+  <div class="badge">The Big Idea</div>
+  <h1 class="page-title">Two Lessons From the Dishonest Steward</h1>
+
+  <div class="panel-grid">
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#fff0cc"/>
+        <text x="215" y="95" text-anchor="middle" font-size="28" font-weight="900">LESSON ONE</text>
+        <circle cx="215" cy="180" r="70" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="170" text-anchor="middle" font-size="22" font-weight="900">MONEY IS NOT</text>
+        <text x="215" y="205" text-anchor="middle" font-size="22" font-weight="900">THE GREATEST ASSET.</text>
+      </svg>
+      <div class="narration">The chapter says God’s blessing and favor are more important than money itself.</div>
+    </div>
+
+    <div class="panel p6 tall">
+      <svg class="art" viewBox="0 0 430 360">
+        <rect width="430" height="360" fill="#e1f5d5"/>
+        <text x="215" y="95" text-anchor="middle" font-size="28" font-weight="900">LESSON TWO</text>
+        <circle cx="215" cy="180" r="70" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="170" text-anchor="middle" font-size="22" font-weight="900">WISE PEOPLE</text>
+        <text x="215" y="205" text-anchor="middle" font-size="22" font-weight="900">THINK ABOUT THE FUTURE.</text>
+      </svg>
+      <div class="narration">Money should not all disappear into short-lived pleasures; some should help shape a wise and generous future.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Chapter 4 in one sentence:</b><br>
+  Hidden treasure is found when we stop trusting money as our security and start using it as a tool—caring for real needs, planning for the future, and investing in people and God’s purposes.</div>
+  <div class="footer">13</div>
+</section>
+
+<!-- PAGE 14 -->
+<section class="page">
+  <div class="badge">Steward Challenge</div>
+  <h1 class="page-title">Talk, Think & Do</h1>
+
+  <div class="challenge">
+    <h2>🧠 Think About It</h2>
+    <div class="q">1. What does Matthew 6:21 say about treasure and the heart?</div>
+    <div class="q">2. What is the difference between having money and trusting in money?</div>
+    <div class="q">3. What does “reliance” mean in this lesson?</div>
+    <div class="q">4. Why was the dishonest steward’s master surprised enough to commend him?</div>
+    <div class="q">5. What are the two main lessons the chapter draws from the parable?</div>
+    <div class="q">6. What does it mean to use money for something eternal?</div>
+  </div>
+
+  <div class="challenge" style="background:#fff0cc">
+    <h2>🔎 Hidden Treasure Challenge</h2>
+    <p style="font-size:20px;line-height:1.45;font-weight:700">
+      Look at how you used your money, time, or possessions this week. What does it say about what you value?
+      Choose one thing you can use this week to help another person or make a wise choice for the future.
+    </p>
+    <p class="keyline">“God, teach me to value what lasts.”</p>
+  </div>
+
+  <div class="challenge" style="background:#e1f5d5">
+    <h2>📖 Scripture Trail</h2>
+    <p style="font-size:18px;line-height:1.55;font-weight:700">
+      <b>Matthew 6:19–21 • Mark 10:23–27 • James 2:26 • Romans 6:16 • Psalm 103:14 • Luke 16:1–9 • Proverbs 13:11 • Genesis 12:2 • Deuteronomy 8:18 • Numbers 23:20</b>
+    </p>
+  </div>
+
+  <div class="verse center">
+    MEMORY VERSE<br><br>
+    “For where your treasure is, there will your heart be also.”<br>
+    <strong>Matthew 6:21</strong>
+  </div>
+
+  <div class="center" style="margin-top:20px">
+    <div class="sticker" style="margin:auto">USE WHAT<br>YOU HAVE<br>FOR WHAT<br>LASTS!</div>
+  </div>
+
+  <div class="footer">14 • END OF CHAPTER 4</div>
+</section>
+
+</div>
+</body>
+</html>

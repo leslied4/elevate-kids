@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Stewards — Chapter 1: Being a Steward</title>
+<style>
+  :root{
+    --ink:#1e2430;
+    --cream:#fffaf0;
+    --gold:#f7c948;
+    --sky:#bfe8ff;
+    --green:#bfe3a5;
+    --blue:#3066be;
+    --red:#e45757;
+    --purple:#7652a6;
+    --tan:#f3dfbb;
+    --soft:#f6f1e8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:#d9dde4;
+    color:var(--ink);
+    font-family:"Trebuchet MS", "Arial Rounded MT Bold", Arial, sans-serif;
+  }
+  .book{max-width:980px;margin:0 auto;padding:24px}
+  .page{
+    width:100%;
+    min-height:1280px;
+    background:var(--cream);
+    margin:0 auto 28px;
+    padding:34px;
+    position:relative;
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+    overflow:hidden;
+    page-break-after:always;
+  }
+  .cover{
+    background:linear-gradient(#85d7ff 0 52%, #86c66b 52% 100%);
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .title{
+    font-size:76px;line-height:.88;font-weight:1000;letter-spacing:-3px;text-transform:uppercase;
+    color:#fff;text-shadow:5px 5px 0 var(--ink);margin:10px 0;
+  }
+  .subtitle{
+    display:inline-block;background:var(--gold);border:5px solid var(--ink);padding:12px 20px;
+    font-size:30px;font-weight:900;transform:rotate(-2deg);
+  }
+  .chapter-label{
+    display:inline-block;background:#fff;border:4px solid var(--ink);padding:8px 14px;font-weight:900;
+    margin-bottom:8px;
+  }
+  .panel-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+  .panel{
+    background:#fff;border:5px solid var(--ink);position:relative;overflow:hidden;min-height:260px;
+    box-shadow:5px 5px 0 rgba(30,36,48,.12);
+  }
+  .p12{grid-column:span 12}.p8{grid-column:span 8}.p7{grid-column:span 7}.p6{grid-column:span 6}.p5{grid-column:span 5}.p4{grid-column:span 4}
+  .art{height:230px;width:100%;display:block;background:#eef7ff}
+  .tall .art{height:360px}
+  .caption{
+    position:absolute;top:10px;left:10px;background:var(--gold);border:3px solid var(--ink);
+    padding:7px 10px;font-weight:900;max-width:76%;z-index:4;
+  }
+  .narration{
+    padding:12px 14px;font-size:18px;line-height:1.35;font-weight:700;background:#fff;
+  }
+  .bubble{
+    position:absolute;background:#fff;border:4px solid var(--ink);border-radius:50%;
+    padding:14px 18px;font-weight:900;font-size:18px;line-height:1.18;z-index:5;text-align:center;
+  }
+  .bubble:after{
+    content:"";position:absolute;width:22px;height:22px;background:#fff;border-right:4px solid var(--ink);
+    border-bottom:4px solid var(--ink);transform:rotate(45deg);bottom:-12px;left:36%;
+  }
+  .bubble.right:after{left:auto;right:28%}
+  .thought{border-style:dashed}
+  .verse{
+    background:#fff6c6;border:5px solid var(--ink);padding:18px 20px;font-family:Georgia,serif;
+    font-size:21px;line-height:1.4;font-weight:700;margin:18px 0;
+  }
+  .verse strong{display:block;font-family:"Trebuchet MS",Arial,sans-serif;font-size:19px;margin-top:8px}
+  .lesson{
+    background:#eaf7df;border:5px solid var(--ink);padding:18px;margin:18px 0;font-size:20px;line-height:1.4
+  }
+  .lesson b{font-size:24px}
+  .page-title{
+    font-size:42px;font-weight:1000;text-transform:uppercase;margin:0 0 18px;border-bottom:7px solid var(--gold);
+    padding-bottom:8px;
+  }
+  .badge{
+    display:inline-block;background:var(--blue);color:white;border:3px solid var(--ink);
+    padding:5px 10px;font-size:15px;font-weight:900;text-transform:uppercase;margin-bottom:8px;
+  }
+  .challenge{
+    background:#efe6ff;border:5px solid var(--ink);padding:22px;margin-top:18px
+  }
+  .challenge h2{margin:0 0 10px;font-size:30px}
+  .q{background:#fff;border:3px dashed var(--ink);padding:12px;margin:10px 0;font-size:18px;font-weight:700}
+  .footer{position:absolute;bottom:12px;right:24px;font-weight:900;font-size:14px}
+  .small{font-size:15px}
+  .center{text-align:center}
+  .keyline{font-size:30px;font-weight:1000;text-align:center;margin:16px 0}
+  .sticker{
+    background:var(--red);color:#fff;border:5px solid var(--ink);border-radius:50%;
+    width:160px;height:160px;display:flex;align-items:center;justify-content:center;text-align:center;
+    font-weight:1000;font-size:23px;transform:rotate(8deg);box-shadow:5px 5px 0 rgba(0,0,0,.18)
+  }
+  @media print{
+    body{background:#fff}.book{padding:0}.page{box-shadow:none;margin:0;width:100%;min-height:100vh}
+  }
+  .bubble.thought{border-style:dashed}
+  @media (max-width:760px){
+    .book{padding:10px}.page{padding:18px;min-height:0}
+    .title{font-size:52px;letter-spacing:-2px}.page-title{font-size:30px}.subtitle{font-size:22px}
+    .panel-grid{display:block}.panel{margin-bottom:14px}
+    .art,.tall .art{height:auto}
+    .caption{position:static;display:block;max-width:none;border-width:0 0 3px;border-radius:0}
+    .bubble{position:static!important;display:block;width:auto!important;border-radius:20px;margin:10px 12px;text-align:left;font-size:17px}
+    .bubble:after{display:none}
+    .footer{position:static;text-align:right;margin-top:10px}
+  }
+</style>
+</head>
+<body>
+<div class="book">
+
+<!-- COVER -->
+<section class="page cover">
+  <div>
+    <div class="chapter-label">CHAPTER 1</div>
+    <div class="title">Financial<br>Stewards</div>
+    <div class="subtitle">Being a Steward</div>
+  </div>
+
+  <svg viewBox="0 0 900 520" width="100%" aria-label="Children holding a treasure chest of gifts, books, coins and tools">
+    <rect x="0" y="350" width="900" height="170" fill="#75b85c"/>
+    <circle cx="100" cy="80" r="54" fill="#ffd75a"/>
+    <g stroke="#1e2430" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- treasure chest -->
+      <rect x="305" y="315" width="290" height="145" rx="12" fill="#c7833f"/>
+      <path d="M320 315 Q450 205 580 315Z" fill="#e2a45f"/>
+      <rect x="426" y="340" width="48" height="70" fill="#f7c948"/>
+      <!-- gifts popping out -->
+      <rect x="380" y="220" width="70" height="80" fill="#e45757"/>
+      <path d="M415 220V300M380 255H450" fill="none"/>
+      <rect x="480" y="225" width="78" height="72" fill="#5a9ee6"/>
+      <path d="M519 225V297M480 258H558" fill="none"/>
+      <circle cx="454" cy="190" r="28" fill="#f7c948"/>
+      <text x="454" y="201" text-anchor="middle" font-size="34" font-family="Arial" fill="#1e2430">$</text>
+      <path d="M570 240 l38 -70 l34 70z" fill="#bfe3a5"/>
+      <!-- child 1 -->
+      <circle cx="195" cy="270" r="52" fill="#7b4f2f"/>
+      <path d="M148 248q46-80 94-10" fill="#1e2430"/>
+      <circle cx="178" cy="272" r="5" fill="#1e2430"/><circle cx="214" cy="272" r="5" fill="#1e2430"/>
+      <path d="M178 295q18 14 36 0" fill="none"/>
+      <rect x="140" y="320" width="115" height="125" rx="30" fill="#f7c948"/>
+      <path d="M140 350L80 390M255 350l55 25" fill="none"/>
+      <!-- child 2 -->
+      <circle cx="700" cy="270" r="52" fill="#8c5b39"/>
+      <path d="M654 246q46-70 95-5" fill="#3b241c"/>
+      <circle cx="681" cy="273" r="5" fill="#1e2430"/><circle cx="717" cy="273" r="5" fill="#1e2430"/>
+      <path d="M681 295q18 14 36 0" fill="none"/>
+      <rect x="645" y="320" width="112" height="125" rx="30" fill="#e45757"/>
+      <path d="M645 350L592 375M757 350l55 40" fill="none"/>
+    </g>
+    <text x="450" y="500" text-anchor="middle" font-size="28" font-weight="900" font-family="Trebuchet MS" fill="#1e2430">
+      “Everything good I have is something God has entrusted to me.”
+    </text>
+  </svg>
+  <div class="footer">FINANCIAL STEWARDS • CHAPTER 1</div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="badge">Scene 1</div>
+  <h1 class="page-title">Mine... or entrusted to me?</h1>
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <div class="caption">Sunday afternoon, after church...</div>
+      <svg class="art" aria-hidden="true" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#bfe8ff"/><rect y="245" width="560" height="115" fill="#9cdb7b"/>
+        <rect x="285" y="95" width="210" height="150" fill="#f0efe8" stroke="#1e2430" stroke-width="7"/>
+        <polygon points="270,100 390,35 510,100" fill="#e45757" stroke="#1e2430" stroke-width="7"/>
+        <rect x="368" y="165" width="45" height="80" fill="#7652a6" stroke="#1e2430" stroke-width="6"/>
+        <rect x="390" y="60" width="15" height="48" fill="#1e2430"/><rect x="372" y="77" width="52" height="15" fill="#1e2430"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="130" cy="205" r="42" fill="#7b4f2f"/><path d="M96 185q35-55 72-5" fill="#1e2430"/>
+          <circle cx="116" cy="207" r="4"/><circle cx="145" cy="207" r="4"/>
+          <rect x="92" y="250" width="80" height="86" rx="24" fill="#f7c948"/>
+          <path d="M95 275l-45 25M170 275l55-28"/>
+          <rect x="40" y="280" width="55" height="35" rx="5" fill="#e4b54c"/>
+          <g stroke="white" stroke-width="2" stroke-linecap="round">
+            <text x="67" y="305" text-anchor="middle" font-size="24" font="#e4b54c">$20</text>
+          </g>
+        </g>
+      </svg>
+      <div class="bubble" style="top:68px;left:22px;width:210px;">Uncle gave me $20! I can buy whatever I want!</div>
+      <div class="narration">Kofi is excited. In his mind, the money is completely his, so the only question is what he wants to do with it.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="190" cy="110" r="48" fill="#8c5b39"/>
+          <path d="M147 90q45-70 90-8" fill="#2a201c"/>
+          <circle cx="175" cy="110" r="5"/><circle cx="205" cy="110" r="5"/>
+          <path d="M175 132q15 11 30 0" fill="none"/>
+          <rect x="135" y="160" width="110" height="130" rx="30" fill="#e45757"/>
+          <path d="M145 200L78 235M235 200l58 42" fill="none"/>
+        </g>
+      </svg>
+      <div class="bubble right" style="top:205px;right:12px;width:190px;">But what if God gave it to you to manage wisely?</div>
+      <div class="narration">Ama asks a question that changes the whole conversation.</div>
+    </div>
+
+    <div class="panel p12">
+      <div class="caption">At kids’ Bible class...</div>
+      <svg class="art" aria-hidden="true" viewBox="0 0 900 230">
+        <rect width="900" height="230" fill="#eef7ff"/>
+        <rect x="45" y="35" width="270" height="140" rx="8" fill="#2d5f4e" stroke="#1e2430" stroke-width="7"/>
+        <text x="180" y="85" text-anchor="middle" fill="white" font-size="28" font-weight="900">STEWARD</text>
+        <text x="180" y="122" text-anchor="middle" fill="white" font-size="20">A person who manages</text>
+        <text x="180" y="150" text-anchor="middle" fill="white" font-size="20">what belongs to another.</text>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="560" cy="105" r="42" fill="#7a4f32"/><path d="M525 88q38-60 75-2" fill="#1e2430"/>
+          <rect x="520" y="150" width="85" height="70" rx="20" fill="#5a9ee6"/>
+          <path d="M520 172l-92-20M605 172l70-48"/>
+          <circle cx="725" cy="110" r="35" fill="#8c5b39"/><rect x="690" y="148" width="70" height="66" rx="18" fill="#f7c948"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:35px;right:26px;width:285px;">A steward takes care of something for its owner. Scripture teaches us to think that way about what God gives us.</div>
+      <div class="narration"><b>Key idea:</b> Our money, abilities, opportunities, and other good gifts are things God has entrusted to us. A financial steward asks, “How should I use this well?”</div>
+    </div>
+  </div>
+
+  <div class="verse">“Every good gift and every perfect gift is from above...” <strong>James 1:17</strong></div>
+  <div class="footer">2</div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="badge">Scene 2</div>
+  <h1 class="page-title">From Owner Thinking to Steward Thinking</h1>
+
+  <div class="panel-grid">
+    <div class="panel p6">
+      <svg class="art" aria-hidden="true" viewBox="0 0 430 230" aria-hidden="true"><rect width="430" height="230" fill="#ffe3dc"/><rect y="205" width="430" height="25" fill="#e8c9b8"/><g stroke="#1e2430" stroke-width="7" stroke-linecap="round"><circle cx="140" cy="92" r="38" fill="#7b4f2f"/><path d="M105 74q36-58 72 0" fill="#1e2430"/><circle cx="127" cy="94" r="4"/><circle cx="154" cy="94" r="4"/><rect x="104" y="132" width="72" height="78" rx="22" fill="#f7c948"/><path d="M108 152L205 140M172 156l35 18" fill="none"/><path d="M120 76l14 6M160 82l14-6" fill="none" stroke-width="5"/><circle cx="215" cy="145" r="52" fill="#ffd75a"/><text x="215" y="160" text-anchor="middle" font-size="46" font-weight="900" stroke="none" fill="#1e2430">$</text><path d="M188 62q-5 12 0 16q6-4 0-16" fill="#5a9ee6" stroke-width="4"/></g><rect x="10" y="10" width="190" height="34" fill="#fff" stroke="#1e2430" stroke-width="4"/><text x="105" y="34" text-anchor="middle" font-size="20" font-weight="900">OWNER THINKING</text></svg><div class="bubble thought" style="top:60px;right:14px;width:190px;">“It is all mine. I must handle everything.”</div>
+      <div class="narration">When we see ourselves as the ultimate source of everything, money can start to feel like a heavy burden.</div>
+    </div>
+    <div class="panel p6">
+      <svg class="art" aria-hidden="true" viewBox="0 0 430 230" aria-hidden="true"><rect width="430" height="230" fill="#e1f5d5"/><rect y="205" width="430" height="25" fill="#b9dfa2"/><circle cx="360" cy="48" r="26" fill="#ffd75a"/><path d="M360 8v12M360 76v12M320 48h12M388 48h12M332 20l8 8M388 76l-8-8M388 20l-8 8M332 76l8-8" stroke="#1e2430" stroke-width="5" stroke-linecap="round"/><g stroke="#1e2430" stroke-width="7" stroke-linecap="round"><circle cx="140" cy="92" r="38" fill="#7b4f2f"/><path d="M105 74q36-58 72 0" fill="#1e2430"/><circle cx="127" cy="94" r="4"/><circle cx="154" cy="94" r="4"/><rect x="104" y="132" width="72" height="78" rx="22" fill="#f7c948"/><path d="M108 152L66 112M172 152l40-40" fill="none"/><path d="M124 74l14-4M160 70l14 4" fill="none" stroke-width="5"/><path d="M122 108q18 18 36 0" fill="none" stroke-width="5" transform="translate(0 0)"/><circle cx="66" cy="100" r="20" fill="#ffd75a"/><text x="66" y="108" text-anchor="middle" font-size="24" font-weight="900" stroke="none" fill="#1e2430">$</text><path d="M212 112l14-8M225 130l14 0" fill="none" stroke-width="0"/></g><rect x="10" y="10" width="210" height="34" fill="#fff" stroke="#1e2430" stroke-width="4"/><text x="115" y="34" text-anchor="middle" font-size="20" font-weight="900">STEWARD THINKING</text></svg><div class="bubble right" style="top:78px;right:12px;width:185px;">“God is my source. I will manage faithfully.”</div>
+      <div class="narration">A steward still makes responsible choices, but remembers that provision, ability, and opportunity ultimately come from God.</div>
+    </div>
+
+    <div class="panel p12 tall">
+      <div class="caption">Teacher Miriam explains...</div>
+      <svg class="art" aria-hidden="true" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#f6f1e8"/>
+        <rect x="70" y="45" width="760" height="245" rx="18" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="450" y="95" text-anchor="middle" font-size="28" font-weight="900">A STEWARD REMEMBERS:</text>
+        <g font-family="Trebuchet MS" font-size="23" font-weight="800" fill="#1e2430">
+          <text x="120" y="140">✓ God gave me abilities and opportunities.</text>
+          <text x="120" y="180">✓ God is the source of every good gift.</text>
+          <text x="120" y="220">✓ What I receive should be managed wisely.</text>
+          <text x="120" y="260">✓ Money is a tool — not my master.</text>
+        </g>
+      </svg>
+      <div class="bubble right" style="bottom:105px;right:38px;width:250px;">That means I can ask God what to do instead of grabbing everything for myself!</div>
+      <div class="narration">This change of mindset—from <b>owner</b> to <b>steward</b>—is the foundation of the lesson.</div>
+    </div>
+  </div>
+
+  <div class="lesson"><b>Remember:</b> Being a steward does <u>not</u> mean doing nothing. It means working faithfully while recognizing that God gives the ability, opportunity, increase, and resources.</div>
+  <div class="footer">3</div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">Abraham Learns to Trust the Source</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <div class="caption">Genesis 12</div>
+      <svg class="art" aria-hidden="true" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#9cdcff"/>
+        <circle cx="470" cy="70" r="38" fill="#ffd75a"/>
+        <polygon points="0,260 170,145 290,260" fill="#c59a65"/>
+        <polygon points="170,260 360,115 560,260" fill="#d2b07a"/>
+        <rect y="260" width="560" height="100" fill="#d6b67e"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="230" cy="195" r="38" fill="#9a6a44"/>
+          <path d="M198 178q35-55 68 0" fill="#ded0b0"/>
+          <path d="M205 205q25 30 50 0" fill="none"/>
+          <rect x="195" y="234" width="72" height="90" rx="16" fill="#7652a6"/>
+          <path d="M195 250l-50 35M267 250l50 28"/>
+          <path d="M205 324l-15 34M255 324l18 34"/>
+          <path d="M310 260q70-55 130 0" fill="none"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:70px;left:22px;width:245px;">Go to the land I will show you. I will bless you... and you will be a blessing.</div>
+      <div class="narration">God called Abram to leave what was familiar and trust Him. God promised to bless him and make him a blessing to others.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#e9d9b5"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <ellipse cx="190" cy="300" rx="140" ry="40" fill="#9fc66d"/>
+          <circle cx="135" cy="255" r="28" fill="#fff"/><circle cx="190" cy="250" r="28" fill="#fff"/><circle cx="245" cy="260" r="28" fill="#fff"/>
+          <circle cx="125" cy="252" r="4"/><circle cx="180" cy="247" r="4"/><circle cx="235" cy="257" r="4"/>
+          <circle cx="190" cy="110" r="42" fill="#9a6a44"/><path d="M155 92q36-55 73 0" fill="#ded0b0"/>
+          <rect x="150" y="150" width="80" height="100" rx="20" fill="#7652a6"/>
+        </g>
+      </svg>
+      <div class="bubble right" style="top:170px;right:12px;width:190px;">Abraham worked, but he did not see his own effort as the ultimate source of his blessing.</div>
+      <div class="narration">The lesson emphasizes that Abraham’s prosperity was connected to God’s promise and favor—not merely cleverness or effort.</div>
+    </div>
+  </div>
+
+  <div class="verse">“...I will bless thee, and make thy name great; and thou shalt be a blessing.” <strong>Genesis 12:2</strong></div>
+  <div class="keyline">BLESSED → TO BE A BLESSING</div>
+  <div class="footer">4</div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">Lot Chooses First</h1>
+
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <div class="caption">Genesis 13</div>
+      <svg class="art" aria-hidden="true" viewBox="0 0 900 360">
+        <rect width="900" height="360" fill="#bfe8ff"/>
+        <circle cx="780" cy="65" r="40" fill="#ffd75a"/>
+        <path d="M0 230 Q180 150 360 230L360 360H0Z" fill="#d8c290"/>
+        <path d="M360 230 Q650 100 900 230L900 360H360Z" fill="#68bd66"/>
+        <path d="M520 300 Q650 255 820 300" fill="none" stroke="#5a9ee6" stroke-width="25"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="260" cy="190" r="38" fill="#9a6a44"/><rect x="225" y="230" width="72" height="95" rx="18" fill="#7652a6"/>
+          <circle cx="410" cy="190" r="38" fill="#9b6a47"/><rect x="375" y="230" width="72" height="95" rx="18" fill="#e45757"/>
+          <path d="M395 250l115-50M250 250l-85-30"/>
+        </g>
+        <text x="150" y="330" font-size="24" font-weight="900">DRIER LAND</text>
+        <text x="650" y="330" font-size="24" font-weight="900">WELL-WATERED PLAIN</text>
+      </svg>
+      <div class="bubble" style="top:85px;left:170px;width:210px;">Lot, you choose first. If you go one way, I’ll go the other.</div>
+      <div class="bubble right" style="top:85px;right:42px;width:210px;">Then I choose the green, well-watered land!</div>
+      <div class="narration">Their herds had grown so large that there was not enough land for both groups. Abraham let Lot choose first.</div>
+    </div>
+
+    <div class="panel p6">
+      <svg class="art" aria-hidden="true" viewBox="0 0 430 230">
+        <rect width="430" height="230" fill="#e1f5d5"/>
+        <circle cx="215" cy="112" r="62" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="105" text-anchor="middle" font-size="22" font-weight="900">LOT LOOKED</text>
+        <text x="215" y="137" text-anchor="middle" font-size="19">at what seemed best</text>
+        <text x="215" y="165" text-anchor="middle" font-size="19">to his eyes.</text>
+      </svg>
+      <div class="narration">Lot chose the land that looked naturally better.</div>
+    </div>
+
+    <div class="panel p6">
+      <svg class="art" aria-hidden="true" viewBox="0 0 430 230">
+        <rect width="430" height="230" fill="#fff0cc"/>
+        <circle cx="215" cy="112" r="62" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="215" y="105" text-anchor="middle" font-size="22" font-weight="900">ABRAHAM</text>
+        <text x="215" y="137" text-anchor="middle" font-size="19">trusted God beyond</text>
+        <text x="215" y="165" text-anchor="middle" font-size="19">what he could see.</text>
+      </svg>
+      <div class="narration">Abraham could afford to be generous because his confidence was in God, not simply in the appearance of the land.</div>
+    </div>
+  </div>
+
+  <div class="verse">After Lot separated from Abram, the LORD told Abram to look in every direction and promised the land to him and his descendants. <strong>Genesis 13:14–17</strong></div>
+  <div class="footer">5</div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">“Let No One Say He Made Me Rich”</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <div class="caption">Genesis 14</div>
+      <svg class="art" aria-hidden="true" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#d8e6ef"/>
+        <polygon points="0,275 160,125 315,275" fill="#b59970"/>
+        <polygon points="240,275 430,105 560,275" fill="#c6aa7f"/>
+        <rect y="275" width="560" height="85" fill="#c6a36e"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="210" cy="205" r="36" fill="#9a6a44"/><rect x="178" y="240" width="68" height="85" rx="16" fill="#7652a6"/>
+          <path d="M246 255l80 18"/>
+          <circle cx="375" cy="205" r="36" fill="#8b5a39"/><rect x="343" y="240" width="68" height="85" rx="16" fill="#e45757"/>
+          <rect x="310" y="278" width="55" height="38" fill="#f7c948"/>
+          <circle cx="338" cy="294" r="8" fill="#fff"/>
+        </g>
+      </svg>
+      <div class="bubble right" style="top:72px;right:14px;width:210px;">Keep the goods for yourself!</div>
+      <div class="narration">After Abraham rescued Lot and defeated the invading kings, the king of Sodom offered Abraham the recovered goods.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#fff0cc"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="190" cy="95" r="45" fill="#9a6a44"/><path d="M151 75q40-62 78 0" fill="#ded0b0"/>
+          <path d="M165 117q26 24 50 0" fill="none"/>
+          <rect x="145" y="142" width="92" height="125" rx="24" fill="#7652a6"/>
+          <path d="M150 175l-75 48M232 175l72-48"/>
+          <path d="M75 223l-25-8M304 127l25-8"/>
+        </g>
+        <text x="190" y="320" text-anchor="middle" font-size="24" font-weight="900">MY TRUST IS IN GOD.</text>
+      </svg>
+      <div class="bubble" style="top:155px;left:16px;width:250px;">No. I will not take it, so you cannot say, “I made Abram rich.”</div>
+      <div class="narration">Abraham wanted it to be clear that the king was not the source of his prosperity.</div>
+    </div>
+  </div>
+
+  <div class="verse">“I will not take from a thread even to a shoelatchet... lest thou shouldest say, I have made Abram rich.” <strong>Genesis 14:22–23</strong></div>
+
+  <div class="lesson"><b>The heart of the lesson:</b> Abraham’s confidence in God was stronger than his desire to grab every possible financial advantage. He could release what was offered because he believed God was his source.</div>
+  <div class="footer">6</div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="badge">Bible Adventure</div>
+  <h1 class="page-title">God Is the Reward</h1>
+
+  <div class="panel-grid">
+    <div class="panel p12 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 900 360">
+        <defs>
+          <radialGradient id="night" cx="50%" cy="45%" r="70%">
+            <stop offset="0" stop-color="#4d5ba8"/><stop offset="1" stop-color="#172044"/>
+          </radialGradient>
+        </defs>
+        <rect width="900" height="360" fill="url(#night)"/>
+        <g fill="#fff">
+          <circle cx="80" cy="50" r="3"/><circle cx="180" cy="90" r="4"/><circle cx="315" cy="48" r="3"/>
+          <circle cx="430" cy="82" r="4"/><circle cx="560" cy="42" r="3"/><circle cx="720" cy="90" r="4"/><circle cx="820" cy="45" r="3"/>
+        </g>
+        <path d="M450 150L330 0h110zM450 150L460 0h130z" fill="#f7c948" opacity=".22"/><path d="M700 170l52 14v56q0 40-52 62q-52-22-52-62v-56z" fill="#5a9ee6" stroke="#1e2430" stroke-width="7" stroke-linejoin="round"/><path d="M700 192v106M666 236h68" stroke="#f7c948" stroke-width="8" stroke-linecap="round"/><g stroke="#1e2430" stroke-width="5"><circle cx="190" cy="330" r="24" fill="#f7c948"/><circle cx="240" cy="335" r="24" fill="#f7c948"/><circle cx="215" cy="300" r="24" fill="#f7c948"/></g><g stroke="#1e2430" stroke-width="7" stroke-linecap="round"><path d="M400 268l-46-42M485 268l46-42" fill="none"/><circle cx="440" cy="205" r="42" fill="#9a6a44"/><path d="M402 185q40-65 80 0" fill="#ded0b0"/>
+          <rect x="400" y="245" width="85" height="110" rx="22" fill="#7652a6"/>
+        </g>
+        <text x="450" y="70" text-anchor="middle" fill="white" font-size="32" font-weight="900">“FEAR NOT, ABRAM...”</text>
+        <text x="450" y="112" text-anchor="middle" fill="#f7c948" font-size="34" font-weight="900">“I AM THY SHIELD, AND THY EXCEEDING GREAT REWARD.”</text>
+      </svg>
+      <div class="narration">After Abraham refused to make the king of Sodom his source, God spoke to him in a vision.</div>
+    </div>
+
+    <div class="panel p6">
+      <svg class="art" aria-hidden="true" viewBox="0 0 430 230" aria-hidden="true"><rect width="430" height="230" fill="#fff"/><text x="215" y="30" text-anchor="middle" font-size="22" font-weight="900">THE WRONG QUESTION</text><g stroke="#1e2430" stroke-width="7" stroke-linecap="round"><rect x="196" y="112" width="38" height="46" fill="#c58f5f"/><rect x="170" y="52" width="90" height="66" rx="24" fill="#c58f5f"/><path d="M193 52v34M215 52v34M238 52v34" fill="none" stroke-width="5"/><path d="M172 92q-22-2-18-20" fill="none"/></g><path d="M150 132l-10 12M280 132l10 12M215 170v-8" stroke="#e45757" stroke-width="5" stroke-linecap="round"/><text x="215" y="192" text-anchor="middle" font-size="19" font-weight="700">“How tightly can I hold</text><text x="215" y="216" text-anchor="middle" font-size="19" font-weight="700">onto everything?”</text></svg>
+      <div class="narration">A clenched-fist attitude makes possessions the center of our confidence.</div>
+    </div>
+
+    <div class="panel p6">
+      <svg class="art" aria-hidden="true" viewBox="0 0 430 230" aria-hidden="true"><rect width="430" height="230" fill="#e1f5d5"/><text x="215" y="30" text-anchor="middle" font-size="22" font-weight="900">THE STEWARD QUESTION</text><g stroke="#1e2430" stroke-width="7" stroke-linecap="round"><rect x="250" y="112" width="110" height="20" rx="10" fill="#c58f5f"/><ellipse cx="215" cy="122" rx="58" ry="16" fill="#c58f5f"/><path d="M162 116q-14-10-8-22" fill="none"/><circle cx="215" cy="88" r="24" fill="#ffd75a"/><text x="215" y="98" text-anchor="middle" font-size="28" font-weight="900" stroke="none" fill="#1e2430">$</text></g><path d="M170 58l-12-10M260 58l12-10M215 50v-12" stroke="#f7c948" stroke-width="5" stroke-linecap="round"/><text x="215" y="180" text-anchor="middle" font-size="19" font-weight="700">“God, how should I manage</text><text x="215" y="206" text-anchor="middle" font-size="19" font-weight="700">what You entrusted to me?”</text></svg>
+      <div class="narration">Stewardship begins when we recognize that God—not money—is our source and security.</div>
+    </div>
+  </div>
+
+  <div class="verse">“Fear not, Abram: I am thy shield, and thy exceeding great reward.” <strong>Genesis 15:1</strong></div>
+  <div class="footer">7</div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="page">
+  <div class="badge">Back to the Kids</div>
+  <h1 class="page-title">A Steward Still Works!</h1>
+
+  <div class="panel-grid">
+    <div class="panel p7 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 560 360">
+        <rect width="560" height="360" fill="#bfe8ff"/>
+        <circle cx="470" cy="65" r="42" fill="#ffd75a"/>
+        <rect y="240" width="560" height="120" fill="#a97848"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="190" cy="165" r="40" fill="#7b4f2f"/><path d="M155 145q38-58 75 0" fill="#1e2430"/>
+          <rect x="152" y="205" width="80" height="100" rx="20" fill="#f7c948"/>
+          <path d="M155 225L95 260M228 225l55 45"/>
+          <path d="M90 275q50 20 100 0M250 290q50 20 100 0"/>
+          <path d="M325 215v110M360 200v125M395 220v105" stroke="#579b47"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:55px;left:24px;width:235px;">So trusting God doesn’t mean I sit around and wait?</div>
+      <div class="narration">No. The lesson uses a farmer as the example: a farmer prepares the soil and plants the seed.</div>
+    </div>
+
+    <div class="panel p5 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 380 360">
+        <rect width="380" height="360" fill="#9cdcff"/>
+        <circle cx="285" cy="70" r="40" fill="#ffd75a"/>
+        <path d="M0 260q95-40 190 0t190 0v100H0z" fill="#7cb45c"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <path d="M50 235q25-70 50 0M130 245q25-75 50 0M220 235q25-70 50 0M290 248q25-70 50 0" stroke="#4f8b3d"/>
+          <path d="M64 170q20 20 40 0M144 180q20 20 40 0M234 168q20 20 40 0M304 180q20 20 40 0" stroke="#5a9ee6"/>
+        </g>
+      </svg>
+      <div class="bubble right" style="top:150px;right:12px;width:200px;">He works faithfully, but he cannot manufacture the sun, rain, soil, health, or life in the seed.</div>
+      <div class="narration">Work matters. But the steward recognizes that even the ability to work and the conditions for increase are gifts.</div>
+    </div>
+
+    <div class="panel p12">
+      <svg class="art" aria-hidden="true" viewBox="0 0 900 230">
+        <rect width="900" height="230" fill="#fff0cc"/>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="235" cy="100" r="38" fill="#7b4f2f"/><rect x="200" y="138" width="72" height="70" rx="20" fill="#f7c948"/>
+          <circle cx="450" cy="100" r="38" fill="#8c5b39"/><rect x="415" y="138" width="72" height="70" rx="20" fill="#e45757"/>
+          <circle cx="665" cy="100" r="38" fill="#9a6a44"/><rect x="630" y="138" width="72" height="70" rx="20" fill="#5a9ee6"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:24px;left:65px;width:220px;">I can work hard...</div>
+      <div class="bubble" style="top:24px;left:340px;width:220px;">...make wise choices...</div>
+      <div class="bubble right" style="top:24px;right:55px;width:220px;">...and still remember God is my source!</div>
+      <div class="narration"><b>Exactly.</b> Stewardship is not laziness. It is faithful responsibility without pretending we created every good thing by ourselves.</div>
+    </div>
+  </div>
+  <div class="footer">8</div>
+</section>
+
+<!-- PAGE 9 -->
+<section class="page">
+  <div class="badge">The Big Idea</div>
+  <h1 class="page-title">Kofi Makes a Steward Plan</h1>
+
+  <div class="panel-grid">
+    <div class="panel p8 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 620 360">
+        <rect width="620" height="360" fill="#eef7ff"/>
+        <rect x="260" y="70" width="300" height="230" rx="12" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="410" y="112" text-anchor="middle" font-size="27" font-weight="900">KOFI’S $20 PLAN</text>
+        <line x1="295" y1="130" x2="525" y2="130" stroke="#1e2430" stroke-width="4"/>
+        <text x="300" y="170" font-size="22" font-weight="800">□ Ask God first</text>
+        <text x="300" y="205" font-size="22" font-weight="800">□ Give generously</text>
+        <text x="300" y="240" font-size="22" font-weight="800">□ Save some</text>
+        <text x="300" y="275" font-size="22" font-weight="800">□ Spend wisely</text>
+        <g stroke="#1e2430" stroke-width="7" stroke-linecap="round">
+          <circle cx="125" cy="165" r="42" fill="#7b4f2f"/><path d="M90 145q38-58 75 0" fill="#1e2430"/>
+          <rect x="88" y="205" width="78" height="98" rx="22" fill="#f7c948"/>
+          <path d="M90 225l-45 30M163 225l55 20"/>
+        </g>
+      </svg>
+      <div class="bubble" style="top:50px;left:20px;width:220px;">Maybe “mine” isn’t the best first word. First I should ask, “How can I be faithful with this?”</div>
+      <div class="narration">Kofi does not have to spend nothing. The change is that he now thinks like a steward before he acts.</div>
+    </div>
+
+    <div class="panel p4 tall">
+      <svg class="art" aria-hidden="true" viewBox="0 0 300 360">
+        <rect width="300" height="360" fill="#e1f5d5"/>
+        <circle cx="150" cy="110" r="70" fill="#fff" stroke="#1e2430" stroke-width="7"/>
+        <text x="150" y="95" text-anchor="middle" font-size="22" font-weight="900">MONEY</text>
+        <text x="150" y="130" text-anchor="middle" font-size="18">is a useful</text>
+        <text x="150" y="155" text-anchor="middle" font-size="22" font-weight="900">TOOL</text>
+        <path d="M70 245h160" stroke="#1e2430" stroke-width="7"/>
+        <text x="150" y="290" text-anchor="middle" font-size="18" font-weight="900">BUT A TERRIBLE MASTER.</text>
+      </svg>
+      <div class="narration">The goal is not to fear money or worship money, but to put it in its proper place.</div>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <b>Chapter 1 in one sentence:</b><br>
+    A financial steward works faithfully and manages wisely, while recognizing that God is the source of every good gift and that what we receive should be used according to His purposes.
+  </div>
+
+  <div class="verse">“For in him we live, and move, and have our being...” <strong>Acts 17:28</strong></div>
+  <div class="footer">9</div>
+</section>
+
+<!-- PAGE 10 -->
+<section class="page">
+  <div class="badge">Steward Challenge</div>
+  <h1 class="page-title">Talk, Think & Do</h1>
+
+  <div class="challenge">
+    <h2>🧠 Think About It</h2>
+    <div class="q">1. In your own words, what is a steward?</div>
+    <div class="q">2. What changed when Kofi stopped thinking only, “This is mine”?</div>
+    <div class="q">3. Why could Abraham let Lot choose the better-looking land first?</div>
+    <div class="q">4. Why did Abraham refuse the king of Sodom’s goods?</div>
+    <div class="q">5. Does trusting God mean we should stop working? Explain the farmer example.</div>
+  </div>
+
+  <div class="challenge" style="background:#fff0cc">
+    <h2>✋ This Week’s Steward Challenge</h2>
+    <p style="font-size:20px;line-height:1.45;font-weight:700">
+      Pick <b>one thing God has entrusted to you</b>—money, a toy, time, a talent, school supplies, a musical skill, or something else.
+      Before you use it, ask:
+    </p>
+    <p class="keyline">“God, how can I use this faithfully?”</p>
+  </div>
+
+  <div class="challenge" style="background:#e1f5d5">
+    <h2>📖 Scripture Trail</h2>
+    <p style="font-size:18px;line-height:1.5;font-weight:700">
+      Read these with a parent, teacher, or friend:
+      <b>Luke 16:1 • James 1:17 • Acts 17:28 • Genesis 12:1–3 • Genesis 13:8–10 • Genesis 13:14–17 • Genesis 14:14 • Genesis 14:21–15:1</b>
+    </p>
+  </div>
+
+  <div class="verse center">
+    MEMORY VERSE<br><br>
+    “Every good gift and every perfect gift is from above...”<br>
+    <strong>James 1:17</strong>
+  </div>
+
+  <div class="center" style="margin-top:22px">
+    <div class="sticker" style="margin:auto">I AM A<br>FINANCIAL<br>STEWARD!</div>
+  </div>
+
+  <div class="footer">10 • END OF CHAPTER 1</div>
+</section>
+
+</div>
+</body>
+</html>
