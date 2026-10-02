@@ -1,0 +1,151 @@
+/* Shared visual refinement for the Financial Stewards workbook.
+   This layer changes presentation only; chapter text and Scripture remain in each HTML file. */
+
+:root {
+  --refine-ink: #1e2430;
+  --refine-paper: #fffaf0;
+  --refine-muted: #667085;
+  --refine-line: rgba(30, 36, 48, .16);
+  --refine-shadow: 0 14px 34px rgba(30, 36, 48, .14);
+  --refine-radius: 14px;
+}
+
+html { scroll-behavior: smooth !important; }
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,255,255,.75), transparent 28rem),
+    #d9dde4 !important;
+  color: var(--refine-ink) !important;
+  letter-spacing: .005em !important;
+}
+
+.book {
+  max-width: 1020px !important;
+  padding: 32px !important;
+}
+
+.page {
+  border: 1px solid var(--refine-line) !important;
+  border-radius: var(--refine-radius) !important;
+  box-shadow: var(--refine-shadow) !important;
+  background-color: var(--refine-paper) !important;
+}
+
+.page:not(.cover) {
+  background-image: linear-gradient(135deg, rgba(255,255,255,.32), transparent 42%) !important;
+}
+
+.cover {
+  border: 0 !important;
+  box-shadow: 0 18px 42px rgba(30, 36, 48, .22) !important;
+}
+
+.title {
+  text-wrap: balance;
+  filter: drop-shadow(0 2px 0 rgba(255,255,255,.08)) !important;
+}
+
+.subtitle,
+.chapter-label,
+.badge {
+  border-radius: 8px !important;
+  box-shadow: 3px 3px 0 rgba(30, 36, 48, .18) !important;
+}
+
+.chapter-label,
+.badge {
+  letter-spacing: .06em !important;
+}
+
+.page-title {
+  max-width: 100%;
+  letter-spacing: -.02em !important;
+  line-height: 1.02 !important;
+  text-wrap: balance;
+}
+
+.panel-grid { gap: 18px !important; }
+
+.panel {
+  border-width: 4px !important;
+  border-radius: 12px !important;
+  box-shadow: 6px 6px 0 rgba(30, 36, 48, .10) !important;
+}
+
+.art { background: #eef7ff !important; }
+
+.narration {
+  border-top: 1px solid rgba(30, 36, 48, .10) !important;
+  color: #293242 !important;
+}
+
+.bubble { box-shadow: 4px 4px 0 rgba(30, 36, 48, .12) !important; }
+
+.verse,
+.lesson,
+.challenge,
+.compare > div {
+  border-radius: 12px !important;
+  box-shadow: 4px 4px 0 rgba(30, 36, 48, .08) !important;
+}
+
+.verse {
+  border-left-width: 8px !important;
+  border-left-color: var(--gold) !important;
+}
+
+.lesson {
+  border-left-width: 8px !important;
+  border-left-color: #78b761 !important;
+}
+
+.challenge {
+  border-left-width: 8px !important;
+  border-left-color: var(--purple) !important;
+}
+
+.q {
+  border-radius: 8px !important;
+  border-style: solid !important;
+  border-color: rgba(30, 36, 48, .25) !important;
+}
+
+.compare { align-items: stretch !important; }
+.compare > div { border-width: 4px !important; }
+
+.sticker { box-shadow: 6px 6px 0 rgba(30, 36, 48, .16) !important; }
+
+.footer {
+  color: var(--refine-muted) !important;
+  letter-spacing: .06em !important;
+}
+
+@media (max-width: 760px) {
+  .book { padding: 12px !important; }
+  .page { border-radius: 10px !important; padding: 22px !important; }
+  .cover { padding: 22px !important; }
+  .title { font-size: clamp(48px, 14vw, 70px) !important; letter-spacing: -2px !important; }
+  .subtitle { font-size: clamp(20px, 6vw, 28px) !important; }
+  .page-title { font-size: clamp(28px, 7vw, 40px) !important; line-height: 1.04 !important; }
+  .panel-grid { gap: 14px !important; }
+  .panel { border-width: 3px !important; box-shadow: 4px 4px 0 rgba(30, 36, 48, .10) !important; }
+  .verse, .lesson, .challenge { padding: 16px !important; border-left-width: 6px !important; }
+  .compare { display: block !important; }
+  .compare > div { margin: 12px 0 !important; }
+  .keyline { font-size: 24px !important; line-height: 1.15 !important; }
+}
+
+@media print {
+  html { scroll-behavior: auto !important; }
+  body { background: #fff !important; }
+  .book { padding: 0 !important; }
+  .page {
+    border-radius: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+  }
+  .page:not(.cover) { background-image: none !important; }
+  .panel, .verse, .lesson, .challenge, .compare > div { box-shadow: none !important; }
+}
