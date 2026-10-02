@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Library — Financial Stewards</title>
+  <style>
+    :root { color-scheme: light; --ink: #202d3b; --paper: #fffaf0; --gold: #f7c948; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Trebuchet MS", Arial, sans-serif; line-height: 1.5; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: auto; padding: 28px; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 24px; border-bottom: 2px solid var(--ink); }
+    .brand { font-size: 20px; font-weight: 900; text-decoration: none; }
+    .teacher { font-size: 14px; }
+    .welcome { display: grid; grid-template-columns: 1fr 240px; align-items: center; gap: 28px; padding: 56px 0 42px; }
+    .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; font-weight: 900; }
+    h1 { margin: 12px 0 18px; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; letter-spacing: -.035em; }
+    .intro { max-width: 530px; font-size: 19px; }
+    .welcome svg { width: 100%; height: auto; }
+    h2 { font-size: 24px; margin: 0 0 18px; }
+    details { border: 3px solid var(--ink); border-radius: 18px; background: white; box-shadow: 6px 6px 0 #202d3b; overflow: hidden; }
+    summary { padding: 28px; cursor: pointer; background: #e3efd6; }
+    summary::marker { color: #3c713d; }
+    .topic-title { font-size: clamp(25px, 4vw, 34px); font-weight: 900; }
+    .topic-info { display: block; margin: 10px 0 0 20px; max-width: 620px; }
+    .topic-action { display: inline-block; margin: 20px 0 0 20px; padding: 8px 16px; border: 2px solid var(--ink); border-radius: 8px; background: var(--gold); font-weight: 900; }
+    .open-label { display: none; }
+    details[open] .open-label { display: inline; }
+    details[open] .closed-label { display: none; }
+    .chapters { padding: 28px; border-top: 3px solid var(--ink); }
+    .chapters > p { margin-top: 0; }
+    ol { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 22px 0 0; }
+    li a { display: flex; align-items: center; gap: 16px; height: 100%; min-height: 100px; padding: 18px; border: 2px solid var(--ink); border-radius: 12px; text-decoration: none; background: #fffaf0; }
+    li a:hover { background: #fff0bd; box-shadow: 3px 3px 0 var(--ink); }
+    .number { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; border: 2px solid var(--ink); border-radius: 50%; background: var(--gold); font-weight: 900; }
+    .chapter-name { font-weight: 900; font-size: 18px; }
+    .arrow { margin-left: auto; font-size: 22px; }
+    :focus-visible { outline: 4px solid #3066be; outline-offset: 5px; }
+    .help { margin: 36px 0; padding: 24px; border-left: 5px solid #6c9860; background: #edf4e7; }
+    .help p { margin: 6px 0; }
+    footer { padding: 24px 0; font-size: 14px; border-top: 1px solid #b7baaf; }
+    @media (max-width: 640px) {
+      .wrap { padding: 20px 16px; }
+      header { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .welcome { grid-template-columns: 1fr; padding: 34px 0; }
+      .welcome svg { display: none; }
+      summary, .chapters { padding: 20px; }
+      ol { grid-template-columns: 1fr; }
+      .intro { font-size: 17px; }
+      li a { min-height: 88px; padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html">Study Library</a>
+      <span class="teacher">With Teacher Elevate</span>
+    </header>
+    <main>
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div>
+          <span class="eyebrow">Discover • Follow along • Create</span>
+          <h1 id="welcome-title">Big lessons.<br>Growing hearts.</h1>
+          <p class="intro">Choose a topic, pick a chapter, and explore together. Read, listen, and bring the pictures to life with color.</p>
+        </div>
+        <svg viewBox="0 0 240 230" aria-hidden="true" fill="none" stroke="#202d3b" stroke-width="4" stroke-linejoin="round">
+          <circle cx="120" cy="112" r="100" fill="#e3efd6" stroke="none"/>
+          <path d="M25 65Q72 46 120 69Q168 46 215 65V175Q167 155 120 180Q73 155 25 175Z" fill="#fffaf0"/>
+          <path d="M120 69V180M44 91Q72 83 98 94M44 111Q72 103 98 114M142 92Q171 81 195 92M142 112Q171 101 195 112"/>
+          <path d="M174 181L210 116L223 123L187 188L171 198Z" fill="#f7c948"/>
+          <path d="M69 30L76 13L83 30L100 37L83 44L76 61L69 44L52 37Z" fill="#f7c948"/>
+        </svg>
+      </section>
+      <h2>Explore our topics</h2>
+      <details id="financial-stewards">
+        <summary>
+          <span class="topic-title">Financial Stewards</span>
+          <span class="topic-info">10 chapters about trust, generosity, wise choices, and caring for what God has entrusted to us.</span>
+          <span class="topic-action"><span class="closed-label">Choose a chapter →</span><span class="open-label">Hide chapters ↑</span></span>
+        </summary>
+        <section class="chapters" aria-label="Financial Stewards chapters">
+          <p>Start with Chapter 1 or choose the lesson you want to explore.</p>
+          <ol>
+            <li><a href="Financial%20Stewards_%20Chapter%201%20(refined).html"><span class="number">1</span><span class="chapter-name">Being a Steward</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_2.html"><span class="number">2</span><span class="chapter-name">God Is a Giver</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_3.html"><span class="number">3</span><span class="chapter-name">Greater Things</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_4.html"><span class="number">4</span><span class="chapter-name">Hidden Treasure</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_5.html"><span class="number">5</span><span class="chapter-name">Seek First the Kingdom</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_6.html"><span class="number">6</span><span class="chapter-name">Prosperity Isn't Selfish</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_7.html"><span class="number">7</span><span class="chapter-name">The Tithe</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_8.html"><span class="number">8</span><span class="chapter-name">Give Where You're Fed</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_9.html"><span class="number">9</span><span class="chapter-name">Partnership</span><span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="financial_stewards_chapter_10.html"><span class="number">10</span><span class="chapter-name">In God We Trust</span><span class="arrow" aria-hidden="true">→</span></a></li>
+          </ol>
+        </section>
+      </details>
+      <aside class="help">
+        <strong>Make each lesson your own.</strong>
+        <p>Use Read &amp; follow to listen. Switch to Coloring mode, then Select color to paint the pictures. Every chapter also supports A4 printing.</p>
+      </aside>
+    </main>
+    <footer>Learn at your own pace. Return here any time to choose another chapter.</footer>
+  </div>
+  <script>
+    const showChapters = () => {
+      if (location.hash === '#financial-stewards') document.getElementById('financial-stewards').open = true;
+    };
+    showChapters();
+    window.addEventListener('hashchange', showChapters);
+  </script>
+</body>
+</html>

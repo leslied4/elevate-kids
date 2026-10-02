@@ -149,3 +149,475 @@ body {
   .page:not(.cover) { background-image: none !important; }
   .panel, .verse, .lesson, .challenge, .compare > div { box-shadow: none !important; }
 }
+
+/* Optional black-and-white coloring-book mode. */
+.coloring-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+  border: 3px solid #1e2430;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: #fff;
+  color: #1e2430;
+  font: 900 14px/1.1 "Trebuchet MS", Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 rgba(30, 36, 48, .18);
+}
+
+.coloring-toggle:hover,
+.coloring-toggle:focus-visible {
+  background: #f7c948;
+  outline: 3px solid rgba(48, 102, 190, .35);
+  outline-offset: 2px;
+}
+
+.coloring-mode,
+.coloring-mode body {
+  background: #fff !important;
+  color: #111 !important;
+}
+
+.coloring-mode .page,
+.coloring-mode .cover {
+  background: #fff !important;
+  border-color: #111 !important;
+  box-shadow: none !important;
+}
+
+.coloring-mode .title,
+.coloring-mode .page-title,
+.coloring-mode .footer {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+.coloring-mode .page-title { border-bottom-color: #111 !important; }
+
+.coloring-mode .subtitle,
+.coloring-mode .caption,
+.coloring-mode .hand,
+.coloring-mode .chapter-label,
+.coloring-mode .badge,
+.coloring-mode .verse,
+.coloring-mode .lesson,
+.coloring-mode .challenge,
+.coloring-mode .q,
+.coloring-mode .compare > div,
+.coloring-mode .sticker,
+.coloring-mode .narration {
+  background: #fff !important;
+  color: #111 !important;
+  border-color: #111 !important;
+  box-shadow: none !important;
+}
+
+.coloring-mode .panel {
+  background: #fff !important;
+  border-color: #111 !important;
+  box-shadow: none !important;
+}
+
+.coloring-mode .bubble {
+  background: #fff !important;
+  color: #111 !important;
+  border-color: #111 !important;
+  box-shadow: none !important;
+}
+
+.coloring-mode .art,
+.coloring-mode svg {
+  background: #fff !important;
+}
+
+.coloring-mode svg rect,
+.coloring-mode svg circle,
+.coloring-mode svg ellipse,
+.coloring-mode svg polygon,
+.coloring-mode svg path,
+.coloring-mode svg line,
+.coloring-mode svg polyline {
+  fill: #fff !important;
+  stroke: #111 !important;
+}
+
+.coloring-mode svg text,
+.coloring-mode svg tspan {
+  fill: #111 !important;
+  stroke: none !important;
+}
+
+.coloring-illustration {
+  display: block;
+  position: absolute;
+  left: 28px;
+  bottom: 32px;
+  width: 134px;
+  height: 134px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coloring-illustration svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: #1e2430;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.coloring-illustration svg circle { fill: #f7c948; }
+.coloring-illustration svg ellipse { fill: #bfe8ff; }
+.coloring-illustration svg rect { fill: #e1f5d5; }
+
+.coloring-illustration.full {
+  left: 50%;
+  right: auto;
+  bottom: 34px;
+  width: 520px;
+  height: 244px;
+  transform: translateX(-50%);
+}
+
+.coloring-illustration.large {
+  left: auto;
+  right: 34px;
+  bottom: 38px;
+  width: 224px;
+  height: 164px;
+}
+
+.coloring-mode .coloring-illustration { display: block; }
+.coloring-mode .coloring-illustration svg * {
+  fill: #fff !important;
+  stroke: #111 !important;
+}
+.coloring-mode .page > *:not(.coloring-illustration):not(.footer) { position: relative; z-index: 1; }
+.coloring-mode .footer { z-index: 1; }
+
+@media (max-width: 760px) {
+  .coloring-toggle {
+    top: 8px;
+    right: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .coloring-illustration {
+    left: 18px;
+    bottom: 26px;
+    width: 78px;
+    height: 78px;
+  }
+
+  .coloring-illustration.large {
+    left: auto;
+    right: 18px;
+    bottom: 28px;
+    width: 142px;
+    height: 104px;
+  }
+
+  .coloring-illustration.full {
+    left: 50%;
+    right: auto;
+    bottom: 24px;
+    width: 92%;
+    height: 170px;
+  }
+}
+
+@media print {
+  .coloring-toggle { display: none !important; }
+}
+
+/* Full-width scenes occupy the remaining page space in normal document flow. */
+.page.with-coloring-scene {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 58px;
+}
+.with-coloring-scene > * { flex-shrink: 0; }
+.with-coloring-scene > .badge { align-self: flex-start; }
+.study-coloring-scene {
+  position: relative;
+  flex: 1 0 auto;
+  min-height: 300px;
+  margin-top: 24px;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+}
+.study-coloring-scene > svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  stroke: #26313c;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.study-coloring-scene svg * { vector-effect: non-scaling-stroke; }
+/* Preserve deliberately open detail strokes, such as window dividers. */
+.coloring-mode .study-coloring-scene svg [fill="none"] {
+  fill: none !important;
+}
+@media screen and (max-width: 760px) {
+  .page.with-coloring-scene { min-height: 0; }
+  .study-coloring-scene { min-height: 0; flex-grow: 0; }
+  .study-coloring-scene > svg { min-height: 0; }
+}
+@media print {
+  .study-coloring-scene { break-inside: avoid; }
+}
+
+/* Screen layout: fluid artwork and dialogue in the document flow. */
+@media screen {
+  .book { width: 100%; padding-top: 72px !important; }
+  .page { min-width: 0; overflow: visible; }
+  .page-title, .subtitle, .chapter-label { overflow-wrap: anywhere; }
+  .panel-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .panel, .compare > div, .hand { min-width: 0; }
+  .bubble, .q, .narration, .verse, .lesson { overflow-wrap: anywhere; }
+  .art, .tall .art { height: auto; max-width: 100%; }
+  .cover svg { display: block; max-width: 100%; height: auto; }
+  .bubble {
+    position: static !important;
+    width: auto !important;
+    max-width: calc(100% - 24px);
+    margin: 14px 12px;
+    border-radius: 18px;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .bubble.right { margin-left: 24px; }
+  .bubble::after { display: none; }
+  .caption {
+    position: static;
+    max-width: none;
+    border-width: 0 0 3px;
+  }
+  .page .footer {
+    position: static;
+    margin-top: 20px;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+  .page.with-coloring-scene { padding-bottom: 24px; }
+}
+@media screen and (max-width: 900px) {
+  .book { padding: 64px 10px 10px !important; }
+  .page, .page.with-coloring-scene {
+    min-height: 0;
+    padding: clamp(12px, 3vw, 24px) !important;
+  }
+  .cover { gap: 28px; }
+  .title { font-size: clamp(32px, 9vw, 68px) !important; }
+  .page-title { font-size: clamp(25px, 5vw, 38px) !important; }
+  .panel-grid { display: block; }
+  .panel { margin-bottom: 18px; min-height: 0; }
+  .compare, .handbox { display: block !important; }
+  .compare > div, .hand { margin-bottom: 16px; }
+  .study-coloring-scene { min-height: 0; flex-grow: 0; }
+  .study-coloring-scene > svg { min-height: 0; }
+  .challenge h2 { font-size: clamp(22px, 5vw, 30px); }
+  .sticker { max-width: 100%; }
+}
+
+/* A4's printable area is 186 × 273 mm with 12 mm margins.
+   Long lessons may continue onto another sheet; never crop or shrink the text. */
+@page { size: A4 portrait; margin: 12mm; }
+@media print {
+  html, body { width: auto !important; margin: 0 !important; padding: 0 !important; }
+  body { font-size: 11pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .book { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  .page, .page.with-coloring-scene {
+    display: block !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    break-after: page;
+    page-break-after: always;
+  }
+  .page:last-child { break-after: auto; page-break-after: auto; }
+  .page.cover {
+    display: flex !important;
+    min-height: 270mm !important;
+    padding: 8mm !important;
+    gap: 8mm;
+    break-inside: avoid !important;
+  }
+  .cover > svg { width: 100%; height: auto; max-height: 160mm; flex-shrink: 1; }
+  .title { font-size: 44pt !important; line-height: .98; letter-spacing: -1.5pt; filter: none !important; }
+  .subtitle { font-size: 21pt !important; transform: none; }
+  .page-title { font-size: 24pt !important; line-height: 1.12 !important; margin: 0 0 5mm; padding-bottom: 2mm; border-bottom-width: 1.2mm; }
+  .badge, .chapter-label { font-size: 10pt; margin-bottom: 3mm; box-shadow: none !important; }
+  .panel-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 3mm !important;
+    break-inside: avoid;
+  }
+  .panel {
+    min-height: 0;
+    width: 100%;
+    margin: 0 0 4mm;
+    border-width: .6mm !important;
+    overflow: visible;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .art, .tall .art { display: block; width: 100%; height: auto; max-height: 50mm; }
+  .bubble {
+    position: static !important;
+    width: auto !important;
+    max-width: none;
+    margin: 3mm;
+    padding: 2.5mm 3mm;
+    border-width: .5mm;
+    border-radius: 3mm;
+    font-size: 11pt;
+    line-height: 1.35;
+    text-align: left;
+    box-shadow: none !important;
+  }
+  .bubble::after { display: none; }
+  .caption { position: static; max-width: none; border-width: 0 0 .5mm; font-size: 11pt; }
+  .narration { font-size: 11pt; line-height: 1.4; padding: 3mm; }
+  .verse, .lesson, .challenge, .compare > div, .hand {
+    font-size: 11pt;
+    line-height: 1.4;
+    padding: 4mm !important;
+    margin: 4mm 0;
+    border-width: .6mm !important;
+    box-shadow: none !important;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .verse { font-size: 12pt; break-inside: avoid; }
+  .verse strong { font-size: 10pt; }
+  .lesson b { font-size: 13pt; }
+  .challenge { break-inside: auto; }
+  .challenge h2 { font-size: 16pt; }
+  .challenge p { font-size: 11pt !important; line-height: 1.4 !important; }
+  .q { font-size: 11pt; line-height: 1.4; padding: 3mm; break-inside: avoid; }
+  .keyline { font-size: 15pt !important; line-height: 1.3 !important; }
+  .compare, .handbox { display: block !important; }
+  h1, h2, .badge { break-after: avoid; page-break-after: avoid; }
+  p { orphans: 3; widows: 3; }
+  .study-coloring-scene {
+    display: block;
+    position: relative;
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    margin: 5mm 0 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .study-coloring-scene > svg { min-height: 0; }
+  .page .footer {
+    position: static !important;
+    margin-top: 4mm;
+    font-size: 9pt;
+    text-align: right;
+    break-before: avoid;
+  }
+  .sticker { width: 35mm; height: 35mm; font-size: 12pt; transform: none; box-shadow: none !important; break-inside: avoid; }
+}
+
+.study-tools {
+  position: sticky; top: 0; z-index: 15;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 10px 12px;
+  justify-content: flex-end;
+  background: #fffaf0; border-bottom: 2px solid #1e2430;
+}
+.study-tools .coloring-toggle { position: static; box-shadow: none; z-index: auto; }
+.study-tools .paint-toggle[hidden] { display: none; }
+.study-tools .study-palette { justify-content: flex-end; }
+.study-tools button, .study-tools .study-home, .study-player button, .study-player select {
+  font: 700 15px/1.3 "Trebuchet MS", Arial, sans-serif;
+  padding: 9px 12px; min-height: 42px;
+  border: 2px solid #1e2430; border-radius: 10px;
+  background: white; color: #1e2430; cursor: pointer;
+}
+.study-tools .study-home { margin-right: auto; text-decoration: none; display: inline-flex; align-items: center; }
+.study-tools button[aria-pressed="true"], .player-controls button:nth-child(2) {
+  background: #f7c948;
+}
+.study-tools :focus-visible, .study-player :focus-visible { outline: 3px solid #3066be; outline-offset: 3px; }
+.study-player button:disabled, .study-tools button:disabled { opacity: .45; cursor: default; }
+.study-palette { flex-basis: 100%; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.study-palette[hidden] { display: none; }
+.study-palette > span { font-size: 14px; }
+.study-palette > button:empty { width: 38px; min-height: 38px; padding: 0; }
+.study-palette input { width: 46px; height: 40px; }
+.study-save-status { flex-basis: 100%; }
+.painting [data-paint-id] { cursor: crosshair; }
+.painting [data-paint-id]:hover { stroke: #3066be !important; }
+.study-player {
+  width: min(960px, 96vw); height: 94dvh;
+  max-width: 96vw; max-height: 94dvh;
+  padding: 16px; border: 3px solid #1e2430; border-radius: 16px;
+  background: #fffaf0; color: #1e2430;
+}
+.study-player[open] { display: flex; flex-direction: column; gap: 12px; }
+.study-player::backdrop { background: #182234cc; }
+.player-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.player-header h2 { font-size: clamp(18px, 3vw, 26px); margin: 0; }
+.player-stage { flex: 1; min-height: 100px; overflow: auto; padding: 6px; }
+.player-stage > * { margin: 0 !important; width: 100%; box-sizing: border-box; }
+.player-stage svg { max-width: 100%; height: auto; }
+.player-stage .study-coloring-scene { min-height: 0; aspect-ratio: 5 / 3; }
+.player-stage .study-coloring-scene svg { height: 100%; min-height: 0; }
+.player-stage .bubble { position: static !important; width: auto !important; margin: 12px; }
+.player-stage .bubble::after { display: none; }
+.player-transcript { max-height: 100px; overflow: auto; font-size: 18px; line-height: 1.6; }
+.player-transcript .speaking { background: #ffe18b; color: #111; border-radius: 3px; }
+.player-notice { margin: 0; font-size: 14px; }
+.player-notice:empty { display: none; }
+.player-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.player-controls select { max-width: 190px; }
+@media screen and (max-width: 600px) {
+  .study-tools { padding: 8px; }
+  .study-player { padding: 10px; }
+  .player-controls { gap: 5px; }
+  .player-controls button, .player-controls select { font-size: 13px; padding: 6px; }
+  .player-transcript { font-size: 16px; max-height: 90px; }
+}
+@media print {
+  .study-tools, .study-player { display: none !important; }
+}
+
+/* Chapter 3: keep the supplementary coloring art with its lesson on A4. */
+@media print {
+  .chapter-three .study-coloring-scene {
+    height: 72mm;
+    aspect-ratio: auto;
+    margin-top: 3mm;
+  }
+  .chapter-three .page-title { margin-bottom: 3mm; }
+  .chapter-three .panel { margin-bottom: 2mm; }
+  .chapter-three .verse, .chapter-three .lesson { margin: 3mm 0; }
+  .chapter-three .print-dense-lesson .study-coloring-scene { height: 60mm; }
+  .chapter-three .print-review-start { break-before: page; page-break-before: always; }
+  .chapter-three .print-challenge .study-coloring-scene { height: 105mm; }
+}
